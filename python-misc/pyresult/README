@@ -1,0 +1,10 @@
+~~~~~~~~
+pyresult
+~~~~~~~~
+
+Quite an old script I found, but still functions well :-)
+I should port this to Python3 and add a support for Snooker as well as
+some command line configuration.
+
+a simple script that extracts some sport results from an european
+tv-channel.

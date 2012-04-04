@@ -4,3 +4,6 @@
 # pyc
 *.pyc
 
+# specific files:
+python-misc/scale/chris.json
+

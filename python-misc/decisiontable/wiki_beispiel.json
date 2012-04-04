@@ -1,0 +1,36 @@
+{
+	"conditions": [
+		"Lieferfähig",
+		"Angaben vollständig",
+		"Bonität in Ordnung"
+	],
+	"actions": {
+		"rechnung": "Lieferung mit Rechnung",
+		"nachnahme": "Lieferung als Nachnahme",
+		"angaben": "Angaben vervollständigen",
+		"nicht_lieferbar": "Mitteilen: nicht lieferbar"
+	},
+	"rules": [
+		[
+			[true, true, true],
+			["rechnung"]
+		],
+		[
+			[true, true, false],
+			["nachnahme"]
+		],
+		[
+			[true, false, true],
+			["rechnung", "angaben"]
+		],
+		[
+			[true, false, false],
+			["nachnahme", "angaben"]
+		],
+		[
+			[false, null, null],
+			["nicht_lieferbar"]
+		]
+		
+	]
+}

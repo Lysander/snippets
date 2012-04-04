@@ -1,0 +1,50 @@
+{
+	"conditions": [
+		"Lebt in CH",
+		"Alter zwischen 18 und 55",
+		"Raucher"
+	],
+    "actions": {
+        "versichern": "Kunden versichern", 
+        "rabatt": "Rabatt von 10%"
+    }, 
+    "rules": [
+        [
+            [
+                false, 
+                null, 
+                null
+            ], 
+            []
+        ], 
+        [
+            [
+                true, 
+                false, 
+                null
+            ], 
+            []
+        ], 
+        [
+            [
+                true, 
+                true, 
+                false
+            ], 
+            [
+                "versichern", 
+                "rabatt"
+            ]
+        ], 
+        [
+            [
+                true, 
+                true, 
+                true
+            ], 
+            [
+                "versichern"
+            ]
+        ]
+    ]
+}

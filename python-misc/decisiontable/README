@@ -1,0 +1,7 @@
+~~~~~~~~~~~~~~~~~
+decision_table.py
+~~~~~~~~~~~~~~~~~
+
+Small module to evaluate a given decision table as described in:
+
+    http://en.wikipedia.org/wiki/Decision_table

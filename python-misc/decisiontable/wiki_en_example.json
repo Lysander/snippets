@@ -1,0 +1,48 @@
+{
+    "conditions": [
+        "Printer does not print",
+        "A red light is flashing",
+        "Printer is unrecognised"
+    ],
+    "actions": {
+        "power": "Check the power cable",
+        "usb": "Check the printer-computer cable",
+        "software": "Ensure printer software is installed",
+        "ink": "Check/replace ink",
+        "jam": "Check for paper jam"
+    },
+    "rules": [
+        [
+            [true, true, true],
+            ["usb", "software", "ink"]
+        ],
+        [
+            [true, true, false],
+            ["ink", "jam"]
+        ],
+        [
+            [true, false, true],
+            ["power", "usb", "software"]
+        ],
+        [
+            [true, false, false],
+            ["jam"]
+        ],
+        [
+            [false, true, true],
+            ["software", "ink"]
+        ],
+        [
+            [false, true, false],
+            ["ink"]
+        ],
+        [
+            [false, false, true],
+            ["software"]
+        ],
+        [
+            [false, false, false],
+            []
+        ]
+    ]
+}

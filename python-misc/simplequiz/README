@@ -1,0 +1,14 @@
+    ~~~~~~~~~~
+    simplequiz
+    ~~~~~~~~~~
+    
+    Simple Module that enables one to play a quiz like those typical
+    quizshows on TV.
+
+    I was inspired by some question at python-forum.de:
+        
+        http://www.python-forum.de/viewtopic.php?f=18&t=28985
+    
+    and by a proposal I made in this thread at ubuntuusers.de:
+        
+        http://forum.ubuntuusers.de/topic/python-2-oder-/4/#post-3409942

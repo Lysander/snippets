@@ -1,0 +1,12 @@
+@prefix rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns .
+@prefix rdfs: http://www.w3.org/2000/01/rdf-schema .
+@prefix tuc: http://www.in.tu-clausthal.de/ontologies .
+
+tuc:istVerbundenMit rdf:type            rdfs:Property .
+                    rdfs:domain         tuc:Part ;
+                    rdfs:range          tuc:Part .
+tuc:istGestecktAuf  rdfs:subPropertyOf  tuc:istVerbundenMit ;
+                    rdfs:domain         tuc:Brick, tuc:Plate ;
+                    rdfs:range          tuc:Brick, tuc:Plate .
+
+tuc:Stein_A         tuc:istGestecktAuf  tuc:Stein_B .

@@ -1,0 +1,11 @@
+class PluggingConnection:
+    EquivalentOf (hasConnectedParts some 
+        (Brick
+            and (isPluggedWith some Brick))
+    ) or (hasConnectedParts some 
+        (Brick
+            and (isPluggedWith some Plate))
+    ) or (hasConnectedParts some 
+        (Plate
+            and (isPluggedWith some Plate))
+    )

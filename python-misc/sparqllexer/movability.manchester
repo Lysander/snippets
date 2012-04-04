@@ -1,0 +1,6 @@
+class Movability:
+    SubClassOf FunctionalRequirement
+    EquivalentTo (FunctionalRequirement
+        and (hasAxisRelation some AxisValuePartition)
+        and (hasMoveability some MoveabilityValuePartition)
+    )

@@ -1,0 +1,34 @@
+PREFIX pront: <http://tuc.de/ontologies/pront_bulldozer.owl#>
+PREFIX lego: <http://tuc.de/ontologies/lego_base.owl#>
+SELECT ?con
+WHERE {
+    {?con   rdf:type            lego:Connection.}
+    UNION
+    {?con   rdfs:subClassOf     lego:Connection.}
+    # Binden der Komponenten an eine Schnittstelle,
+    # Anforderung und Fachdokument definieren.
+    ?con    lego:hasChild           ?comp_a, ?comp_b;
+            lego:hasRequirement     ?req;
+            lego:isImplementedBy    ?con_comp;
+            lego:hasResource        ?con_res.
+    ?con_res    rdf:type    lego:LDraw.
+    # Typen der Lösung auf Assembly festlegen
+    ?con_comp   rdf:type        lego:Assembly.
+    # Festlegen der Typen der Komponenten
+    # und der zugehörigen CAD-Dateien
+    ?comp_a     rdf:type        pront:Chassis;
+                lego:hasResource    ?res_a.
+    ?res_a      rdf:type        lego:LDraw;
+                lego:hasResourceURI 
+                    "chassis_light.ldr"^^xsd:string .
+    ?comp_b     rdf:type        pront:Body;
+                lego:hasResource    ?res_b.
+    ?res_b      rdf:type        lego:LDraw;
+                lego:hasResourceURI 
+                    "body_light.ldr"^^xsd:string .
+    # Verwindungssteifheit fordern
+    ?req    rdf:type        lego:Torsion;
+            lego:hasTorsion lego:TorsionResistantValue;
+            # Erklärung der Umsetzung fordern
+            lego:isImplementedBy    ?con_comp.
+}

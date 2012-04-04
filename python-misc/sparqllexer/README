@@ -1,0 +1,23 @@
+~~~~~~~~~~~
+sparqllexer
+~~~~~~~~~~~
+
+A small module I wrote for my diploma thesis in 2009 / 2010, which dealt
+about semantic technologies like OWL, SPARQL and related technologies.
+
+This module contains lexer definitions for various semantic formats for 
+the famous 'sphinx' syntax highlighting tool, which are:
+
+    - SPARQL
+    - Turtle
+    - Manchester Syntax
+
+And at least - not directly related to semantic languages - a lexer for:
+
+    - LDraw
+
+a CAD Tool for designing digital LEGO(R) models.
+
+Please note that there are by far not complete or perfect. I just 
+implemented everything I needed. Feel free to accomplish this task or
+use this as a basic for writing a more sophisticated lexer :-)

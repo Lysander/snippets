@@ -1,0 +1,30 @@
+class Brick:
+    SubClassOf Part
+    EquivalentOf (Part and hasHeight value 24)
+
+class Brick1xX:
+    SubClassOf Brick
+    EquivalentOf (Brick and hasDepth value 20)
+
+class Brick1x1:
+    SubClassOf Brick1xX
+    EquivalentOf (Brick1xX and hasLength value 20)
+
+class Technic:
+    SubClassOf Part
+
+class TechnicBrick:
+    SubClassOf Technic
+    EquivalentOf (Brick1xX and hasHole value true)
+
+class TechnicBrick1x16:
+    SubClassOf TechnicBrick
+    EquivalentOf (TechnicBrick and hasLength value 320)
+
+class TechnicGear:
+    SubClassOf Technic
+    EquivalentOf (Technic and hasTooth some int)
+
+class TechnicGear8:
+    SubClassOf TechnicGear
+    EquivalentOf (TechnicGear and hasTooth 8)

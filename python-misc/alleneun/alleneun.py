@@ -41,21 +41,21 @@
         0 O O O
         1 O O O
         2 O O O
-        0 1 2
+          0 1 2
         X-Pos: 1
         Y-Pos: 1
 
         0 O X O
         1 X X X
         2 O X O
-        0 1 2        
+          0 1 2        
         X-Pos: 0
         Y-Pos: 0
 
         0 X O X
         1 O X X
         2 X X O
-        0 1 2
+          0 1 2
     
     The game ends if all fields are filled with markers.
     

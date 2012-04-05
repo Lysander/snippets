@@ -55,6 +55,7 @@
 import argparse
 import random
 import itertools
+import json
 
 
 DEMO_QUESTIONS = [
@@ -106,7 +107,9 @@ def load(filename):
     :returns: list of questions
     """
     with open(filename, "r") as infile:
-        return set_answers(json.load(infile))
+        questions = json.load(infile)
+        set_answers(questions)
+        return questions
 
         
 def simple_ai(prompt, numbering):

@@ -1,0 +1,218 @@
+[
+  {
+    "question": "What is the biggest science fiction comic series on earth?", 
+    "options": [
+      "Perry Rhodan", 
+      "Krieg der Sterne", 
+      "Star Trek", 
+      "Flash Gordon"
+    ]
+  }, 
+  {
+    "question": "When did the French Revolution start?", 
+    "options": [
+      "1789", 
+      "1798", 
+      "1673", 
+      "1803"
+    ]
+  }, 
+  {
+    "question": "Who were the first german Federal Chancellor?", 
+    "options": [
+      "Konrad Adenauer", 
+      "Ludwig Erhard", 
+      "Friedrich Ebert", 
+      "Willy Brandt"
+    ]
+  }, 
+  {
+    "question": "When does water boil under standard pressure?", 
+    "options": [
+      "100 degree", 
+      "95 degree", 
+      "10 degree", 
+      "25 degree"
+    ]
+  }, 
+  {
+    "question": "What is the chemical formula for water?", 
+    "options": [
+      "H20", 
+      "CO2", 
+      "HO2", 
+      "HCO"
+    ]
+  }, 
+  {
+    "question": "What is the offical language of India?", 
+    "options": [
+      "Hindi", 
+      "India", 
+      "Suaheli", 
+      "English"
+    ]
+  }, 
+  {
+    "question": "What is the standard protocol for websites in the internet?", 
+    "options": [
+      "http", 
+      "ftp", 
+      "sftp", 
+      "www"
+    ]
+  }, 
+  {
+    "question": "What is the most used Linux distribution?", 
+    "options": [
+      "Ubuntu", 
+      "Suse", 
+      "RedHat", 
+      "Debian"
+    ]
+  }, 
+  {
+    "question": "When started the world wide web for general use?", 
+    "options": [
+      "1991", 
+      "1998", 
+      "1994", 
+      "1983"
+    ]
+  }, 
+  {
+    "question": "Who were a cofounder of Wikipedia?", 
+    "options": [
+      "Jimmy Wales", 
+      "Steve Jobs", 
+      "Hugo Watson", 
+      "Mark Zuckerberg"
+    ]
+  }, 
+  {
+    "question": "What are the first numbers of Pi?", 
+    "options": [
+      "3,1415926...", 
+      "3,1415927...", 
+      "3,1415932...", 
+      "3,1415923..."
+    ]
+  }, 
+  {
+    "question": "Who painted the ceiling of the Sistine Chapel?", 
+    "options": [
+      "Michelangelo Buonarotti", 
+      "Sandro Boticelli", 
+      "Domenico Ghirlandaio", 
+      "Donatello"
+    ]
+  }, 
+  {
+    "question": "What is the smallest country of the world?", 
+    "options": [
+      "Vatican City", 
+      "Monaco", 
+      "Nauru", 
+      "Liechtenstein"
+    ]
+  }, 
+  {
+    "question": "Which piece of clothing looks like the contour of Italia?", 
+    "options": [
+      "boot", 
+      "hat", 
+      "t-shirt", 
+      "skirt"
+    ]
+  }, 
+  {
+    "question": "Who got the Nobel Prize for Peace in 1901?", 
+    "options": [
+      "Henry Dunant", 
+      "Charles Albert Gobat", 
+      "Theodore Roosevelt", 
+      "Louis Renault"
+    ]
+  }, 
+  {
+    "question": "When was the \"Nebra sky disk\" maked?", 
+    "options": [
+      "circa 1600 before christus", 
+      "circa 2300 before christus", 
+      "circa 3000 before christus", 
+      "circa 4500 before christus"
+    ]
+  }, 
+  {
+    "question": "When was the programming language C released?", 
+    "options": [
+      "1972", 
+      "1968", 
+      "1975", 
+      "1981"
+    ]
+  }, 
+  {
+    "question": "What was the first fully automated, full programmingable and with binary Floating point working computer of the world?", 
+    "options": [
+      "Zuse Z3", 
+      "Atanasoff-Berry-Computer", 
+      "Zuse Z1", 
+      "Colossus"
+    ]
+  }, 
+  {
+    "question": "How many classes of characters has got the game Diabolo II?", 
+    "options": [
+      "5", 
+      "7", 
+      "4", 
+      "8"
+    ]
+  }, 
+  {
+    "question": "How many provinces has got Austria?", 
+    "options": [
+      "9", 
+      "5", 
+      "7", 
+      "11"
+    ]
+  }, 
+  {
+    "question": "What element has got the chimical cemblem \"O\"?", 
+    "options": [
+      "dioxygen", 
+      "nitrogen", 
+      "hydrogen", 
+      "carbon"
+    ]
+  }, 
+  {
+    "question": "Who is for a longer time dead?", 
+    "options": [
+      "Sokrates", 
+      "Platon", 
+      "Aristoteles", 
+      "Epikur"
+    ]
+  }, 
+  {
+    "question": "Who said: \"Cogito ergo sum\"?", 
+    "options": [
+      "René Descartes", 
+      "Sokrates", 
+      "Immanuel Kant", 
+      "David Hume"
+    ]
+  }, 
+  {
+    "question": "What is the result of radical 1024?", 
+    "options": [
+      "32", 
+      "16", 
+      "64", 
+      "106"
+    ]
+  }
+]

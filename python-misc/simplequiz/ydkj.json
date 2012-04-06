@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Hätte man die tierischen Laute des Tyrannosaurus in Jurassic Park in unsere Sprache übersetzt, welchen Satz hätte er wahrheitsgemäß sprechen können?", 
+    "options": [
+      "„Ich glaub, ich bin in der falschen Zeit.“", 
+      "„Ich liebe Jeff Goldblum.“", 
+      "„Ich fühle mich irgendwie zu groß.“", 
+      "„Ich mag doch gar kein Fleisch.“"
+    ]
+  }, 
+  {
+    "question": "Wo liegt der Hase am Wärmsten?", 
+    "options": [
+      "Pfanne", 
+      "Unterschlupf", 
+      "Bett", 
+      "Tiefkühltruhe"
+    ]
+  }, 
+  {
+    "question": "Wer fühlte sich mit Pudel wohl pudelwohl?", 
+    "options": [
+      "Arthur Schopenhauer", 
+      "Jack the Ripper", 
+      "Napoleon Bonaparte", 
+      "Ronald McDonald"
+    ]
+  }, 
+  {
+    "question": "So 'ne Kacke! denkt bestimmt jeder über ein gewisses Kunstwerk von...", 
+    "options": [
+      "Piero Manzoni", 
+      "Marcel Duchamp", 
+      "Joseph Beuys", 
+      "Andy Warhol"
+    ]
+  }, 
+  {
+    "question": "Welcher Snack hätte römischen Soldaten wohl am besten gefallen?", 
+    "options": [
+      "Mars", 
+      "Snickers", 
+      "Bounty", 
+      "KitKat"
+    ]
+  }, 
+  {
+    "question": "Welches ist Goethes berühmtestes Körperteil?", 
+    "options": [
+      "Faust", 
+      "Knie", 
+      "Kinn", 
+      "Ellenbogen"
+    ]
+  }, 
+  {
+    "question": "Was hätte der erste Gewinner des Nobelpreises für Mathematik sagen können?", 
+    "options": [
+      "Huch, mich gibt's ja gar nicht!", 
+      "a²+b²=c²", 
+      "Mein Name ist Hase!", 
+      "Eigentlich stehe ich ja mehr auf Quallen..."
+    ]
+  }, 
+  {
+    "question": "Was sagte ein Gouvernor von Kalifornien?", 
+    "options": [
+      "Ich komme wieder.", 
+      "Geschüttelt, nicht gerührt!", 
+      "Folge dem weißen Kaninchen!", 
+      "Nimm dies, Schurke!"
+    ]
+  }
+]

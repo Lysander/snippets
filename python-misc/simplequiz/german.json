@@ -1,0 +1,533 @@
+[
+  {
+    "question": "Welches ist die umfangreichste Science-Fiction-Serie der Welt?", 
+    "options": [
+      "Perry Rhodan", 
+      "Krieg der Sterne", 
+      "Star Trek", 
+      "Flash Gordon"
+    ]
+  }, 
+  {
+    "question": "Wann begann die französische Revolution?", 
+    "options": [
+      "1789", 
+      "1798", 
+      "1673", 
+      "1803"
+    ]
+  }, 
+  {
+    "question": "Wer rief am 9.11.1918 in Berlin die Weimarer Republik aus?", 
+    "options": [
+      "Philipp Scheidemann", 
+      "Karl Liebknecht", 
+      "Rosa Luxemburg", 
+      "Friedrich Ebert"
+    ]
+  }, 
+  {
+    "question": "Wie hieß der erste deutsche Bundeskanzler?", 
+    "options": [
+      "Konrad Adenauer", 
+      "Ludwig Erhard", 
+      "Friedrich Ebert", 
+      "Willy Brandt"
+    ]
+  }, 
+  {
+    "question": "Wann siedet Wasser bei Normaldruck?", 
+    "options": [
+      "100 °C", 
+      "95 °C", 
+      "10 °C", 
+      "25 °C"
+    ]
+  }, 
+  {
+    "question": "Wie lautet die Summenformel für Wasser?", 
+    "options": [
+      "H20", 
+      "CO2", 
+      "HO2", 
+      "HCO"
+    ]
+  }, 
+  {
+    "question": "Welche ist die Landessprache von Indien?", 
+    "options": [
+      "Hindi", 
+      "Indisch", 
+      "Suaheli", 
+      "Englisch"
+    ]
+  }, 
+  {
+    "question": "Was hatte der erste wichtige PC mit graphischer Oberfläche für ein OS?", 
+    "options": [
+      "Macintosh", 
+      "DOS", 
+      "Linux", 
+      "Windows"
+    ]
+  }, 
+  {
+    "question": "Wie lautet das Standardprotokoll für Webseiten im Internet?", 
+    "options": [
+      "http", 
+      "ftp", 
+      "sftp", 
+      "www"
+    ]
+  }, 
+  {
+    "question": "Welches ist die verbreitetste Linux-Distribution=", 
+    "options": [
+      "Ubuntu", 
+      "Suse", 
+      "RedHat", 
+      "Debian"
+    ]
+  }, 
+  {
+    "question": "Wann wurde das World Wide Web für die allgemeine Nutzung freigegeben?", 
+    "options": [
+      "1991", 
+      "1998", 
+      "1994", 
+      "1983"
+    ]
+  }, 
+  {
+    "question": "Von wem stammt der Satz: \"Wovon man nicht sprechen kann, darüber muss man schweigen.\"?", 
+    "options": [
+      "Ludwig Wittgenstein", 
+      "Arthur Schopenhauer", 
+      "Friedrich Hegel", 
+      "Platon"
+    ]
+  }, 
+  {
+    "question": "Wer war ein Begründer der Wikipedia?", 
+    "options": [
+      "Jimmy Wales", 
+      "Steve Jobs", 
+      "Hugo Watson", 
+      "Mark Zuckerberg"
+    ]
+  }, 
+  {
+    "question": "Wie heißt eine der höchsten Auszeichnungen für Mathematiker?", 
+    "options": [
+      "Fields-Medaille", 
+      "Nobelpreis für Mathematik", 
+      "Poincaré-Preis", 
+      "Turing Award"
+    ]
+  }, 
+  {
+    "question": "Wie lauten die ersten Stellen der Kreiszahl Pi?", 
+    "options": [
+      "3,1415926...", 
+      "3,1415927...", 
+      "3,1415932...", 
+      "3,1415923..."
+    ]
+  }, 
+  {
+    "question": "Wer bemalte die Decke der Sixtinischen Kapelle?", 
+    "options": [
+      "Michelangelo Buonarotti", 
+      "Sandro Boticelli", 
+      "Domenico Ghirlandaio", 
+      "Donatello"
+    ]
+  }, 
+  {
+    "question": "Welches ist der kleinste anerkannte Staat der Welt?", 
+    "options": [
+      "Vatikanstadt", 
+      "Monaco", 
+      "Nauru", 
+      "Liechtenstein"
+    ]
+  }, 
+  {
+    "question": "Welche/r Politiker/in bekam im Jahr 2008 den Spitznamen Zensursula?", 
+    "options": [
+      "Ursula von der Leyen", 
+      "Sabine Leutheusser-Schnarrenberger", 
+      "Wolfgang Schäuble", 
+      "Kristina Schröder"
+    ]
+  }, 
+  {
+    "question": "Welchem Kleidungsstück ähnelt der Umriss Italiens?", 
+    "options": [
+      "Stiefel", 
+      "Hut", 
+      "T-Shirt", 
+      "Rock"
+    ]
+  }, 
+  {
+    "question": "Wer unter anderem erhielt den ersten Friedensnobelpreis im Jahr 1901?", 
+    "options": [
+      "Henry Dunant", 
+      "Charles Albert Gobat", 
+      "Theodore Roosevelt", 
+      "Louis Renault"
+    ]
+  }, 
+  {
+    "question": "Wann wurde etwa die Himmelsscheibe von Nebra angefertigt?", 
+    "options": [
+      "um 1600 v.Chr.", 
+      "um 2300 v.Chr.", 
+      "um 3000 v.Chr.", 
+      "Um 4500 v.Chr."
+    ]
+  }, 
+  {
+    "question": "Wann wurde die Programmiersprache C veröffentlicht?", 
+    "options": [
+      "1972", 
+      "1968", 
+      "1975", 
+      "1981"
+    ]
+  }, 
+  {
+    "question": "Wie hieß der erste vollautomatische, programmgesteuerte und frei programmierbare, in binärer Gleitpunktberechnung arbeitende Computer der Welt?", 
+    "options": [
+      "Zuse Z3", 
+      "Atanasoff-Berry-Computer", 
+      "Zuse Z1", 
+      "Colossus"
+    ]
+  }, 
+  {
+    "question": "Der wievielte Deutsche Bundestag wurde im Jahr 2009 gewählt?", 
+    "options": [
+      "17. Bundestag", 
+      "20. Bundestag", 
+      "18. Bundestag", 
+      "19. Bundestag"
+    ]
+  }, 
+  {
+    "question": "Wie viele Charakterklassen gibt es in dem Spiel „Diablo II“?", 
+    "options": [
+      "5", 
+      "7", 
+      "4", 
+      "8"
+    ]
+  }, 
+  {
+    "question": "Wie viele Bundesländer hat Österreich?", 
+    "options": [
+      "9", 
+      "5", 
+      "7", 
+      "11"
+    ]
+  }, 
+  {
+    "question": "Welches Element hat das chemische Symbol „O“?", 
+    "options": [
+      "Sauerstoff", 
+      "Stickstoff", 
+      "Wasserstoff", 
+      "Kohlenstoff"
+    ]
+  }, 
+  {
+    "question": "Wer gehört neben Dieter Bohlen zu „Modern Talking“?", 
+    "options": [
+      "Thomas Anders", 
+      "Robbie Williams", 
+      "Mark Medlock", 
+      "Daniel Küblböck"
+    ]
+  }, 
+  {
+    "question": "Wie viele Bundesländer hat Deutschland?", 
+    "options": [
+      "16", 
+      "14", 
+      "15", 
+      "17"
+    ]
+  }, 
+  {
+    "question": "Wer ist am längsten tot?", 
+    "options": [
+      "Sokrates", 
+      "Platon", 
+      "Aristoteles", 
+      "Epikur"
+    ]
+  }, 
+  {
+    "question": "Von wem stammt der Ausspruch „Ich denke, also bin ich“?", 
+    "options": [
+      "René Descartes", 
+      "Sokrates", 
+      "Immanuel Kant", 
+      "David Hume"
+    ]
+  }, 
+  {
+    "question": "Was ist die Wurzel aus 1024?", 
+    "options": [
+      "32", 
+      "16", 
+      "64", 
+      "106"
+    ]
+  }, 
+  {
+    "question": "Was gehört nicht zum menschlichen Nervensystem?", 
+    "options": [
+      "Hypofüse", 
+      "Parasympathikus", 
+      "Gehirn", 
+      "Sympathikus"
+    ]
+  }, 
+  {
+    "question": "Was liegt am Hinterkopf?", 
+    "options": [
+      "Sehzentrum", 
+      "Hörzentrum", 
+      "Riechzentrum", 
+      "Sprachzentrum"
+    ]
+  }, 
+  {
+    "question": "Was feiern die Juden am Pessach-Fest?", 
+    "options": [
+      "Auszug aus Ägypten", 
+      "Zerstörung des Tempels in Jerusalem", 
+      "Einzug in Ägypten", 
+      "Gründung des Staates Israels"
+    ]
+  }, 
+  {
+    "question": "Was war der Vorgänger des geprägten Geldes?", 
+    "options": [
+      "Wägegeld", 
+      "Papiergeld", 
+      "Buchgeld", 
+      "Naturalgeld"
+    ]
+  }, 
+  {
+    "question": "Welcher Himmelskörper gilt seit 2006 nicht mehr als Planet?", 
+    "options": [
+      "Pluto", 
+      "Mond", 
+      "Uranus", 
+      "Sonne"
+    ]
+  }, 
+  {
+    "question": "Von wem stammt der kategorische Imperativ?", 
+    "options": [
+      "Hegel", 
+      "Kant", 
+      "Marx", 
+      "Engels"
+    ]
+  }, 
+  {
+    "question": "Welcher König beherrschte Frankreich in der Vorphase der Französischen Revolution?", 
+    "options": [
+      "Ludwig XVI.", 
+      "Ludwig CXI.", 
+      "Prince Charles", 
+      "Philipp XII."
+    ]
+  }, 
+  {
+    "question": "In welcher Atmosphäre findet das Wettergeschehen statt?", 
+    "options": [
+      "Troposphäre", 
+      "Mesosphäre", 
+      "Stratosphäre", 
+      "Thermosphäre"
+    ]
+  }, 
+  {
+    "question": "Welche Physiker verbergen sich hinter der Abkürzung EPR?", 
+    "options": [
+      "Einstein-Pascal-Rayleigh", 
+      "Eddison-Podolsky-Rutherford", 
+      "Eccles-Planck-Rayleigh", 
+      "Einstein-Podolsky-Rosen"
+    ]
+  }, 
+  {
+    "question": "Was besagt der fermatsche Satz?", 
+    "options": [
+      "a²+b²=c²", 
+      "a³+b³=c³", 
+      "sin(alpha)=Gegenkathete/Hypotenuse", 
+      "a^n+b^n=c^n"
+    ]
+  }, 
+  {
+    "question": "Wie viele Ehefrauen hatte Henry VIII.?", 
+    "options": [
+      "1", 
+      "3", 
+      "6", 
+      "8"
+    ]
+  }, 
+  {
+    "question": "Wie hieß der erste Mensch auf dem Mond?", 
+    "options": [
+      "Neil Armstrong", 
+      "Louis Armstrong", 
+      "Neil Young", 
+      "Michael Collins"
+    ]
+  }, 
+  {
+    "question": "Wie hieß der zweite Mensch auf dem Mond?", 
+    "options": [
+      "Buzz Aldrin", 
+      "Neil Armstrong", 
+      "Michael Collins", 
+      "Ron Evans"
+    ]
+  }, 
+  {
+    "question": "Was untersucht ein Dermatologe?", 
+    "options": [
+      "Haut", 
+      "Verdauungstrakt", 
+      "Herz", 
+      "Nieren"
+    ]
+  }, 
+  {
+    "question": "Welches Getränk hat den höchsten Koffeingehalt?", 
+    "options": [
+      "Kaffee", 
+      "Schwarztee", 
+      "Orangensaft", 
+      "Wasser"
+    ]
+  }, 
+  {
+    "question": "In welchem Jahr spielt George Orwells düstere Zukunftsvision?", 
+    "options": [
+      "1984", 
+      "1999", 
+      "2024", 
+      "2100"
+    ]
+  }, 
+  {
+    "question": "Wie lautet Goethes zweiter Vorname?", 
+    "options": [
+      "Wolfgang", 
+      "Robert", 
+      "Jonas", 
+      "Franz"
+    ]
+  }, 
+  {
+    "question": "Wie nennt man in der Musik ein Intervall von 8 Tonstufen?", 
+    "options": [
+      "Oktave", 
+      "Septime", 
+      "None", 
+      "Quinte"
+    ]
+  }, 
+  {
+    "question": "Wie alt wurde Alexander der Große?", 
+    "options": [
+      "33 Jahre", 
+      "56 Jahre", 
+      "62 Jahre", 
+      "45 Jahre"
+    ]
+  }, 
+  {
+    "question": "Welches Land gehört nicht zu den Mitgliedstaaten der Europäischen Union?", 
+    "options": [
+      "Schweiz", 
+      "Finnland", 
+      "Litauen", 
+      "Zypern"
+    ]
+  }, 
+  {
+    "question": "Wie heißt die höchste Erhebung des Wetterstein-Gebirges?", 
+    "options": [
+      "Zugspitze", 
+      "Brocken", 
+      "Wetterstein", 
+      "Wetterspitze"
+    ]
+  }, 
+  {
+    "question": "Wie heißt die größte Stadt Australiens?", 
+    "options": [
+      "Sidney", 
+      "Melburn", 
+      "Canberra", 
+      "Bribane"
+    ]
+  }, 
+  {
+    "question": "Welchen Nobelpreis gibt es nicht?", 
+    "options": [
+      "Mathematik", 
+      "Literatur", 
+      "Chemie", 
+      "Medizin"
+    ]
+  }, 
+  {
+    "question": "Welches ist das erste Buch Moses?", 
+    "options": [
+      "Genesis", 
+      "Exodus", 
+      "Ijob", 
+      "Numeri"
+    ]
+  }, 
+  {
+    "question": "Wer malte die Mona Lisa?", 
+    "options": [
+      "Leonardo da Vinci", 
+      "Peter Paul Rubens", 
+      "Michelangelo Buonarotti", 
+      "Claude Monet"
+    ]
+  }, 
+  {
+    "question": "Wie heißt Michael Jacksons erfolgreichstes Studioalbum?", 
+    "options": [
+      "Thriller", 
+      "Invincible", 
+      "Bad", 
+      "History"
+    ]
+  }, 
+  {
+    "question": "Der Schauspieler welcher Filmfigur wurde Gouvernor in Kalifornien?", 
+    "options": [
+      "Terminator", 
+      "Wolverine", 
+      "Superman", 
+      "Batman"
+    ]
+  }
+]

@@ -9,7 +9,7 @@
     ]
   }, 
   {
-    "question": "Wo liegt der Hase am Wärmsten?", 
+    "question": "Wo liegt der Hase am wärmsten?", 
     "options": [
       "Pfanne", 
       "Unterschlupf", 
@@ -27,7 +27,7 @@
     ]
   }, 
   {
-    "question": "So 'ne Kacke! denkt bestimmt jeder über ein gewisses Kunstwerk von...", 
+    "question": "„So ‘ne Kacke!“ denkt bestimmt jeder über ein gewisses Kunstwerk von …", 
     "options": [
       "Piero Manzoni", 
       "Marcel Duchamp", 
@@ -56,19 +56,19 @@
   {
     "question": "Was hätte der erste Gewinner des Nobelpreises für Mathematik sagen können?", 
     "options": [
-      "Huch, mich gibt's ja gar nicht!", 
-      "a²+b²=c²", 
-      "Mein Name ist Hase!", 
-      "Eigentlich stehe ich ja mehr auf Quallen..."
+      "„Huch, mich gibt’s ja gar nicht!“", 
+      "„a²+b²=c²“", 
+      "„Mein Name ist Hase!“", 
+      "„Eigentlich stehe ich ja mehr auf Quallen …“"
     ]
   }, 
   {
-    "question": "Was sagte ein Gouvernor von Kalifornien?", 
+    "question": "Was sagte ein Gouverneur von Kalifornien?", 
     "options": [
-      "Ich komme wieder.", 
-      "Geschüttelt, nicht gerührt!", 
-      "Folge dem weißen Kaninchen!", 
-      "Nimm dies, Schurke!"
+      "„Ich komme wieder.“", 
+      "„Geschüttelt, nicht gerührt!“", 
+      "„Folge dem weißen Kaninchen!“", 
+      "„Nimm dies, Schurke!“"
     ]
   }
 ]

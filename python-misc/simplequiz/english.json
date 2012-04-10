@@ -3,7 +3,7 @@
     "question": "What is the biggest science fiction comic series on earth?", 
     "options": [
       "Perry Rhodan", 
-      "Krieg der Sterne", 
+      "Star Wars", 
       "Star Trek", 
       "Flash Gordon"
     ]
@@ -18,7 +18,7 @@
     ]
   }, 
   {
-    "question": "Who were the first german Federal Chancellor?", 
+    "question": "Who was the first German Federal Chancellor?", 
     "options": [
       "Konrad Adenauer", 
       "Ludwig Erhard", 
@@ -27,12 +27,12 @@
     ]
   }, 
   {
-    "question": "When does water boil under standard pressure?", 
+    "question": "When does water boil under normal pressure?", 
     "options": [
-      "100 degree", 
-      "95 degree", 
-      "10 degree", 
-      "25 degree"
+      "100 °C", 
+      "95 °C", 
+      "10 °C", 
+      "25 °C"
     ]
   }, 
   {
@@ -45,16 +45,16 @@
     ]
   }, 
   {
-    "question": "What is the offical language of India?", 
+    "question": "What is the official language of India?", 
     "options": [
       "Hindi", 
       "India", 
-      "Suaheli", 
+      "Swahili", 
       "English"
     ]
   }, 
   {
-    "question": "What is the standard protocol for websites in the internet?", 
+    "question": "What is the normal protocol for websites on the Internet?", 
     "options": [
       "http", 
       "ftp", 
@@ -63,16 +63,16 @@
     ]
   }, 
   {
-    "question": "What is the most used Linux distribution?", 
+    "question": "What is the most popular Linux distribution?", 
     "options": [
       "Ubuntu", 
-      "Suse", 
+      "SuSE", 
       "RedHat", 
       "Debian"
     ]
   }, 
   {
-    "question": "When started the world wide web for general use?", 
+    "question": "When did the World Wide Web start for general use?", 
     "options": [
       "1991", 
       "1998", 
@@ -81,7 +81,7 @@
     ]
   }, 
   {
-    "question": "Who were a cofounder of Wikipedia?", 
+    "question": "Who was a co-founder of Wikipedia?", 
     "options": [
       "Jimmy Wales", 
       "Steve Jobs", 
@@ -102,13 +102,13 @@
     "question": "Who painted the ceiling of the Sistine Chapel?", 
     "options": [
       "Michelangelo Buonarotti", 
-      "Sandro Boticelli", 
+      "Sandro Botticelli", 
       "Domenico Ghirlandaio", 
       "Donatello"
     ]
   }, 
   {
-    "question": "What is the smallest country of the world?", 
+    "question": "What is the smallest country on earth?", 
     "options": [
       "Vatican City", 
       "Monaco", 
@@ -117,16 +117,16 @@
     ]
   }, 
   {
-    "question": "Which piece of clothing looks like the contour of Italia?", 
+    "question": "Which piece of clothing looks like the contour of Italy?", 
     "options": [
       "boot", 
       "hat", 
-      "t-shirt", 
+      "T-shirt", 
       "skirt"
     ]
   }, 
   {
-    "question": "Who got the Nobel Prize for Peace in 1901?", 
+    "question": "Who won the Nobel Peace Prize in 1901?", 
     "options": [
       "Henry Dunant", 
       "Charles Albert Gobat", 
@@ -135,12 +135,12 @@
     ]
   }, 
   {
-    "question": "When was the \"Nebra sky disk\" maked?", 
+    "question": "When was the \"Nebra sky disk\" made?", 
     "options": [
-      "circa 1600 before christus", 
-      "circa 2300 before christus", 
-      "circa 3000 before christus", 
-      "circa 4500 before christus"
+      "circa 1600 BC", 
+      "circa 2300 BC", 
+      "circa 3000 BC", 
+      "circa 4500 BC"
     ]
   }, 
   {
@@ -153,7 +153,7 @@
     ]
   }, 
   {
-    "question": "What was the first fully automated, full programmingable and with binary Floating point working computer of the world?", 
+    "question": "What was the first fully automated, completely programmable and with binary floating-point technology working computer?", 
     "options": [
       "Zuse Z3", 
       "Atanasoff-Berry-Computer", 
@@ -162,7 +162,7 @@
     ]
   }, 
   {
-    "question": "How many classes of characters has got the game Diabolo II?", 
+    "question": "How many classes of characters has the game \"Diablo II\" got?", 
     "options": [
       "5", 
       "7", 
@@ -171,7 +171,7 @@
     ]
   }, 
   {
-    "question": "How many provinces has got Austria?", 
+    "question": "How many provinces has Austria got?", 
     "options": [
       "9", 
       "5", 
@@ -180,34 +180,34 @@
     ]
   }, 
   {
-    "question": "What element has got the chimical cemblem \"O\"?", 
+    "question": "What element has the chemical symbol \"O\"?", 
     "options": [
-      "dioxygen", 
+      "oxygen", 
       "nitrogen", 
       "hydrogen", 
       "carbon"
     ]
   }, 
   {
-    "question": "Who is for a longer time dead?", 
+    "question": "Who is dead the longest time?", 
     "options": [
-      "Sokrates", 
-      "Platon", 
-      "Aristoteles", 
-      "Epikur"
+      "Socrates", 
+      "Plato", 
+      "Aristotle", 
+      "Epicure"
     ]
   }, 
   {
-    "question": "Who said: \"Cogito ergo sum\"?", 
+    "question": "Who said: \"Cogito ergo sum?\"", 
     "options": [
       "René Descartes", 
-      "Sokrates", 
+      "Socrates", 
       "Immanuel Kant", 
       "David Hume"
     ]
   }, 
   {
-    "question": "What is the result of radical 1024?", 
+    "question": "What is the square root of 1024?", 
     "options": [
       "32", 
       "16", 

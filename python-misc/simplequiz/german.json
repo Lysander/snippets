@@ -9,7 +9,7 @@
     ]
   }, 
   {
-    "question": "Wann begann die französische Revolution?", 
+    "question": "Wann begann die Französische Revolution?", 
     "options": [
       "1789", 
       "1798", 
@@ -18,7 +18,7 @@
     ]
   }, 
   {
-    "question": "Wer rief am 9.11.1918 in Berlin die Weimarer Republik aus?", 
+    "question": "Wer rief am 9. 11. 1918 in Berlin die Weimarer Republik aus?", 
     "options": [
       "Philipp Scheidemann", 
       "Karl Liebknecht", 
@@ -47,23 +47,23 @@
   {
     "question": "Wie lautet die Summenformel für Wasser?", 
     "options": [
-      "H20", 
-      "CO2", 
-      "HO2", 
+      "H₂O", 
+      "CO₂", 
+      "HO₂", 
       "HCO"
     ]
   }, 
   {
-    "question": "Welche ist die Landessprache von Indien?", 
+    "question": "Wie heißt die Landessprache Indiens?", 
     "options": [
       "Hindi", 
       "Indisch", 
-      "Suaheli", 
+      "Swahili", 
       "Englisch"
     ]
   }, 
   {
-    "question": "Was hatte der erste wichtige PC mit graphischer Oberfläche für ein OS?", 
+    "question": "Für welches Betriebssystem war der erste wichtige PC mit grafischer Oberfläche?", 
     "options": [
       "Macintosh", 
       "DOS", 
@@ -81,7 +81,7 @@
     ]
   }, 
   {
-    "question": "Welches ist die verbreitetste Linux-Distribution=", 
+    "question": "Welches ist die verbreitetste Linux-Distribution?", 
     "options": [
       "Ubuntu", 
       "Suse", 
@@ -99,7 +99,7 @@
     ]
   }, 
   {
-    "question": "Von wem stammt der Satz: \"Wovon man nicht sprechen kann, darüber muss man schweigen.\"?", 
+    "question": "Von wem stammt der Satz: \"Wovon man nicht sprechen kann, darüber muss man schweigen\"?", 
     "options": [
       "Ludwig Wittgenstein", 
       "Arthur Schopenhauer", 
@@ -171,7 +171,7 @@
     ]
   }, 
   {
-    "question": "Wer unter anderem erhielt den ersten Friedensnobelpreis im Jahr 1901?", 
+    "question": "Wer erhielt unter anderem den ersten Friedensnobelpreis im Jahr 1901?", 
     "options": [
       "Henry Dunant", 
       "Charles Albert Gobat", 
@@ -182,10 +182,10 @@
   {
     "question": "Wann wurde etwa die Himmelsscheibe von Nebra angefertigt?", 
     "options": [
-      "um 1600 v.Chr.", 
-      "um 2300 v.Chr.", 
-      "um 3000 v.Chr.", 
-      "Um 4500 v.Chr."
+      "um 1600 v. Chr.", 
+      "um 2300 v. Chr.", 
+      "um 3000 v. Chr.", 
+      "um 4500 v. Chr."
     ]
   }, 
   {
@@ -290,7 +290,7 @@
   {
     "question": "Was gehört nicht zum menschlichen Nervensystem?", 
     "options": [
-      "Hypofüse", 
+      "Hypophyse", 
       "Parasympathikus", 
       "Gehirn", 
       "Sympathikus"
@@ -306,7 +306,7 @@
     ]
   }, 
   {
-    "question": "Was feiern die Juden am Pessach-Fest?", 
+    "question": "Was feiern die Juden an „Pessach“?", 
     "options": [
       "Auszug aus Ägypten", 
       "Zerstörung des Tempels in Jerusalem", 
@@ -346,7 +346,7 @@
     "options": [
       "Ludwig XVI.", 
       "Ludwig CXI.", 
-      "Prince Charles", 
+      "Prinz Charles", 
       "Philipp XII."
     ]
   }, 
@@ -441,7 +441,7 @@
     ]
   }, 
   {
-    "question": "Wie nennt man in der Musik ein Intervall von 8 Tonstufen?", 
+    "question": "Wie nennt man in der Musik ein Intervall von acht Tonstufen?", 
     "options": [
       "Oktave", 
       "Septime", 
@@ -468,7 +468,7 @@
     ]
   }, 
   {
-    "question": "Wie heißt die höchste Erhebung des Wetterstein-Gebirges?", 
+    "question": "Wie heißt die höchste Erhebung des Wettersteingebirges?", 
     "options": [
       "Zugspitze", 
       "Brocken", 
@@ -495,7 +495,7 @@
     ]
   }, 
   {
-    "question": "Welches ist das erste Buch Moses?", 
+    "question": "Welches ist das erste Buch Mose?", 
     "options": [
       "Genesis", 
       "Exodus", 
@@ -522,7 +522,7 @@
     ]
   }, 
   {
-    "question": "Der Schauspieler welcher Filmfigur wurde Gouvernor in Kalifornien?", 
+    "question": "Der Schauspieler welcher Filmfigur wurde Gouverneur in Kalifornien?", 
     "options": [
       "Terminator", 
       "Wolverine", 

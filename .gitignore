@@ -5,5 +5,5 @@
 *.pyc
 
 # specific files:
-python-misc/scale/chris.json
+Python/python-misc/scale/chris.json
 

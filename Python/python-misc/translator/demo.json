@@ -1,0 +1,11 @@
+{
+    "root": [
+        ["\"", "#token", "string"], 
+        [" ", ";", null], 
+        [".", "#token", null]
+    ], 
+    "string": [
+        ["\"", "#token", "#pop"], 
+        [".", "#token", null]
+    ]
+}

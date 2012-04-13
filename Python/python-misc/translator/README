@@ -1,0 +1,9 @@
+~~~~~~~~~~~~~
+translator.py
+~~~~~~~~~~~~~
+
+simple module to translate each characters of a given text into a
+predefined other character. That is implemented by a simple state machine.
+
+It was inspired by the pygments way to implement a lexer:
+http://pygments.org/docs/lexerdevelopment/

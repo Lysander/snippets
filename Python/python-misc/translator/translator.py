@@ -131,10 +131,7 @@ def main():
 
     args = parser.parse_args()
     
-    if args.lexer:
-        lexer = load(args.lexer)
-    else:
-        lexer = demo_lexer
+    lexer = load(args.lexer) if args.lexer else demo_lexer
     
     for line in args.infile:
         args.outfile.write("".join(translate(line, lexer)))

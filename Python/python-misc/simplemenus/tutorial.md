@@ -1,6 +1,6 @@
-========================
-Tutorial für Simplemenus
-========================
+==========================
+Tutorial für "simplemenus"
+==========================
 
 In diesem kleinen Tutorial möchte ich die Entwicklung eines Menüsystems für
 einfache CLI Programme in Python beschreiben.
@@ -17,8 +17,8 @@ aussehen
 4  Beenden
 ```
 
-Der Benutzer soll dann durch Eingabe des zugehörigen Indizes die Aktion aus-
-lösen.
+Der Benutzer soll dann durch Eingabe des zugehörigen Indizes die Aktion
+auslösen.
 
 So weit so gut und einfach.
 
@@ -55,8 +55,9 @@ def menu():
 
 Das sieht doch ganz einfach aus. Ist das also eine gute Lösung?
 
-Ich überlege mir folgendes: Ich möchte mein Programm erweitern um eine Laden-
-und Speichern-Funktion. Was müsste ich also tun, um mein Menü zu erweitern?
+Ich überlege mir folgendes: Ich möchte mein Programm um eine Laden- und 
+Speichern-Funktion erweitern. Was müsste ich also tun, um mein Menü zu 
+erweitern?
 
 Schauen wir uns die Stellen im einzelnen an:
 
@@ -77,8 +78,8 @@ etwas dazuschreiben. Ich muss dann noch daran denken, dass ich den Eintrag
 
 Weiter im Code...
 
-In meinem `if...elif`-Block muss ich die Wahl des Benutzers abgleichen und die
-Funktionen aufrufen:
+In meinem `if...elif`-Block muss ich die Wahlmöglichkeiten des Benutzers 
+erweitern und die neuen Funktionen verfügbar machen:
 
 ```python
         if choice == 1:
@@ -100,6 +101,7 @@ Auch hier muss ich daran denken, den Indexvergleich für das Beenden auf "6" zu
 setzen. Außerdem muss ich die Schranken in der Fehlerausgabe anpassen...
 
 Insgesamt sieht die Funktion nun so aus:
+
 ```python
 def menu():
     while True
@@ -135,3 +137,32 @@ wirkt, je mehr Optionen hinzukommen.
 Das muss doch auch einfacher gehen...
 
 ... und das tut es!
+
+
+Datenstrukturen
+---------------
+
+Python bietet einem von Hause aus einige sehr praktische Datenstrukturen an.
+Mit Hilfe solcher *Strukturen*, kann man *Daten* *strukturieren*.
+
+Welche Daten können wir denn in unserem Menü bisher identifizieren?
+
+Wir haben einen zusammengesetzten String (in der `print`-Funktion), einzelne
+Indizes und letztlich die Funktionen, die wir verfügbar machen wollen.
+
+Aber halt? Sind Funktionen denn *Daten*? Das hängt ganz vom Betrachtungswinkel
+ab. Funktionen sind erst einmal direkte Bestandteile eines Programms. Aber
+für mein Menü kann ich die Funktionen ja auch als Bestandteil meiner
+Menü-Definition ansehen... dann könnte man sie durchaus als Daten
+interpretieren.
+
+Auf jeden Fall können wir festhalten, dass alle diese Daten im Moment nicht
+zusammengehörig sind; sie existieren lose gekoppelt in der `menu`-Funktion.
+Wir erinneren uns an meine Änderungen - ich musste an mehreren Stellen im Code
+etwas ändern, da Daten hinzugekommen sind.
+
+Wieso fassen wir diese nicht einfach in eine Struktur zusammen und 
+*"berechnen"* aus dieser Struktur den Menüaufbau, die möglichen Eingaben
+und die aufzurufende Funktion?
+
+Antwort: Weil das furchtbar kompliziert und wenig greifbar klingt... :-(

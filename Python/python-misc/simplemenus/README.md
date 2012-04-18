@@ -1,8 +1,8 @@
 ~~~~~~~~~~~
-simplemenus
+Simplemenus
 ~~~~~~~~~~~
 
-This is ca collection of some menu implementations for simple Python CLI
+This is a collection of some menu implementations for simple Python CLI
 programs. Or to be more precise it is am project that shows the evolution
 process of generating a genereic, but easy to use menu system.
 
@@ -18,6 +18,8 @@ Start reading / studiing the examples in the following order:
     - metamenu.py
 
     - classymenu.py
+    
+Or study the small tutorial `tutorial.md` :-)
 
 
 .. moduleauthor:: Christian Hausknecht <christian.hausknecht@gmx.de>

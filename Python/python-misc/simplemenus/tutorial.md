@@ -1,6 +1,6 @@
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
 Tutorial für Simplemenus
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
 
 In diesem kleinen Tutorial möchte ich die Entwicklung eines Menüsystems für
 einfache CLI Programme in Python beschreiben.
@@ -26,7 +26,7 @@ Doch wie setzt man so etwas um?
 
 
 Naiver Versuch
-~~~~~~~~~~~~~~
+--------------
 
 Man sieht recht häufig Code wie diesen:
 
@@ -59,6 +59,7 @@ Ich überlege mir folgendes: Ich möchte mein Programm erweitern um eine Laden-
 und Speichern-Funktion. Was müsste ich also tun, um mein Menü zu erweitern?
 
 Schauen wir uns die Stellen im einzelnen an:
+
 ```python
         print(
             "1  Eintrag hinzufügen",
@@ -78,6 +79,7 @@ Weiter im Code...
 
 In meinem `if...elif`-Block muss ich die Wahl des Benutzers abgleichen und die
 Funktionen aufrufen:
+
 ```python
         if choice == 1:
             add_entry()
@@ -97,4 +99,39 @@ Funktionen aufrufen:
 Auch hier muss ich daran denken, den Indexvergleich für das Beenden auf "6" zu
 setzen. Außerdem muss ich die Schranken in der Fehlerausgabe anpassen...
 
-Puh! Ganz schön viel Arbeit!
+Insgesamt sieht die Funktion nun so aus:
+```python
+def menu():
+    while True
+        print(
+            "1  Eintrag hinzufügen",
+            "2  Eintrag löschen",
+            "3  Eintrag suchen",
+            "4  Telefonbuch speichern",
+            "5  Telefonbuch laden",
+            "6  Beenden",
+            sep="\n"
+        )
+        choice = int(input("Ihre Wahl? "))
+        if choice == 1:
+            add_entry()
+        elif choice == 2:
+            remove_entry()
+        elif choice == 3:
+            search_entry()
+        elif choice == 4:
+            save()
+        elif choice == 5:
+            load()
+        elif choice == 6:
+            sys.exit(0)
+        else:
+            print("Bitte nur Zahlen zwischen 1 und 6 eingeben!")
+```
+
+Puh! Ganz schön viel Arbeit! Dazu kommt noch, dass der Code immer aufgeblähter
+wirkt, je mehr Optionen hinzukommen.
+
+Das muss doch auch einfacher gehen...
+
+... und das tut es!

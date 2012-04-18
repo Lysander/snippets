@@ -1,6 +1,6 @@
-~~~~~~~~~~~
+===========
 Simplemenus
-~~~~~~~~~~~
+===========
 
 This is a collection of some menu implementations for simple Python CLI
 programs. Or to be more precise it is am project that shows the evolution
@@ -12,11 +12,8 @@ things in these projects.
 Start reading / studiing the examples in the following order:
 
     - simplemenu.py
-
     - submenu.py
-
     - metamenu.py
-
     - classymenu.py
     
 Or study the small tutorial `tutorial.md` :-)

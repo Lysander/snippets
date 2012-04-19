@@ -11,12 +11,12 @@ things in these projects.
 
 Start reading / studiing the examples in the following order:
 
-    - simplemenu.py
-    - submenu.py
-    - metamenu.py
-    - classymenu.py
+- simplemenu.py
+- submenu.py
+- metamenu.py
+- classymenu.py
     
-Or study the small tutorial `tutorial.md` :-)
+Or study the small tutorial `TUTORIAL.md` :-)
 
 
 .. moduleauthor:: Christian Hausknecht <christian.hausknecht@gmx.de>

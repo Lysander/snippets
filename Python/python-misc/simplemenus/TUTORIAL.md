@@ -563,10 +563,13 @@ def handle_menu(texts, funcs):
     while True:
         for index, text in enumerate(texts, 1):
             print("{}  {}".format(index, text))
-        choice = int(input("Ihre Wahl? "))
-        funcs[choice-1]()
+        choice = int(input("Ihre Wahl? ")) - 1
+        funcs[choice]()
 ```
-Sieht doch recht handlich aus. Testen wir das einmal:
+Sieht doch recht handlich aus. Wir ziehen die `1` hier einfach direkt von der
+Nutzereingabe ab, da sieht dann beim Indexzugriff übersichtlicher aus und
+wir brauchen die "verfälschte" Eingabe ja auch nicht weiter.
+Testen wir das einmal:
 
 ```python 
 In [64]: handle_menu(menutexts, menufuncs)
@@ -670,8 +673,8 @@ def handle_menu(menu):
     while True:
         for index, item in enumerate(menu, 1):
             print("{}  {}".format(index, item[0]))
-        choice = int(input("Ihre Wahl? "))
-        menu[choice-1][1]()
+        choice = int(input("Ihre Wahl? ")) - 1
+        menu[choice][1]()
 ```
 Anstelle von zwei Listen übergeben wir unsere Menüdefinition nun als einen
 einzelnen Parameter. Zur Ausgabe benennen wir `text` in `item` um, da das
@@ -739,10 +742,9 @@ def handle_menu(menu):
     while True:
         for index, item in enumerate(menu, 1):
             print("{}  {}".format(index, item[0]))
-        choice = int(input("Ihre Wahl? "))
-        # Wir müssen wieder 1 subtrahieren, damit der Vergleich passt
-        if choice-1 in range(len(menu)):
-            menu[choice-1][1]()
+        choice = int(input("Ihre Wahl? ")) - 1
+        if choice in range(len(menu)):
+            menu[choice][1]()
         else:
             print("Bitte nur Zahlen im Bereich 1 - {} eingeben".format(
                                                                     len(menu)))

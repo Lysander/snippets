@@ -142,7 +142,8 @@ class Menu:
                 else:
                     raise IndexError
             except (ValueError, IndexError):
-                print("Bitte nur Zahlen aus dem Bereich")
+                print("Bitte nur Zahlen aus dem Bereich 1..{} eingeben".format(
+                                                    len(self.context.items)))
 
     def run(self):
         """

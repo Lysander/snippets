@@ -111,7 +111,8 @@ def get_user_input(entries):
             else:
                 raise IndexError
         except (ValueError, IndexError):
-            print("Bitte nur Zahlen aus dem Bereich")
+            print("Bitte nur Zahlen aus dem Bereich 1 - {} eingeben".format(
+                                                                len(entries)))
 
 
 def handle_menu(menudef):

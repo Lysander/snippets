@@ -40,7 +40,7 @@
     triggered by the core function `handle_menu`.
 
     This is esspecially written for beginners, so there is no magic like
-    `functools.partial` or some clojures to create demo functions.
+    `functools.partial` or some closures to create demo functions.
 
     .. moduleauthor:: Christian Hausknecht <christian.hausknecht@gmx.de>
 """

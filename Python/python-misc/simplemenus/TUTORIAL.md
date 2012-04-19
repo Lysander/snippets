@@ -1,6 +1,6 @@
-==========================
-Tutorial für "simplemenus"
-==========================
+==================================================
+Tutorial für das Erstellen von einfachen Textmenüs
+==================================================
 
 In diesem kleinen Tutorial möchte ich die Entwicklung eines Menüsystems für
 einfache CLI Programme in Python beschreiben.
@@ -53,11 +53,18 @@ def menu():
             print("Bitte nur Zahlen zwischen 1 und 4 eingeben!")
 ```
 
-Das sieht doch ganz einfach aus. Ist das also eine gute Lösung?
+Das sieht doch ganz einfach aus. In einer Endlosschleife geben wir mittels
+`print` das Menü aus, holen uns die Eingabe des Benutzers via `input` und
+testen dann in einem `if...elif...else`-Block die einzelnen gültigen
+Optionen. Trifft eine Bedingung zu, so rufen wir die passende Funktion auf,
+die die eigentliche *Arbeit* verrichtet. Der Code sieht ziemlich verständlich
+und einfach aus.
+
+Ist das also eine gute Lösung?
 
 Ich überlege mir folgendes: Ich möchte mein Programm um eine Laden- und 
-Speichern-Funktion erweitern. Was müsste ich also tun, um mein Menü zu 
-erweitern?
+Speichern-Funktion erweitern. Was müsste ich also tun, um mein Menü
+anzupassen?
 
 Schauen wir uns die Stellen im einzelnen an:
 
@@ -139,11 +146,29 @@ Das muss doch auch einfacher gehen...
 ... und das tut es!
 
 
-Datenstrukturen
----------------
+Trenne Code und Daten!
+----------------------
+
+Unser Problem besteht darin, dass wir die Daten für das Menü mit dem Code
+für die Auswertung und die Darstellung mischen. Somit müssen wir an zig
+verschiedenen Stellen den Code anpassen, wenn sich etwas an der Menüstruktur
+ändert.
+
+Wir müssen also unsere Menüdefinition irgend wie an einer Stelle im Code
+bündeln. Darüber hinaus müssen wir die Defintion von der Verarbeitung
+(also der Ausgabe, dem User-Input und der Auswertung) trennen.
+
+Doch wie macht man das?
+
+Ganz einfach: Wir müssen die Daten in einer passenden Daten*struktur*
+zusammenfassen!
+
+
+Benutze Datenstrukturen
+------------------------
 
 Python bietet einem von Hause aus einige sehr praktische Datenstrukturen an.
-Mit Hilfe solcher *Strukturen*, kann man *Daten* *strukturieren*.
+Mit Hilfe solcher Strukturen, kann man Daten strukturieren.
 
 Welche Daten können wir denn in unserem Menü bisher identifizieren?
 
@@ -163,6 +188,30 @@ etwas ändern, da Daten hinzugekommen sind.
 
 Wieso fassen wir diese nicht einfach in eine Struktur zusammen und 
 *"berechnen"* aus dieser Struktur den Menüaufbau, die möglichen Eingaben
-und die aufzurufende Funktion?
+und die aufzurufenden Funktionen?
 
 Antwort: Weil das furchtbar kompliziert und wenig greifbar klingt... :-(
+
+Schauen wir uns doch mal ein einfaches Beispiel an:
+    
+```python
+menu = [
+    "1  Eintrag hinzufügen",
+    "2  Eintrag löschen",
+    "3  Eintrag suchen",
+    "4  Beenden"
+]
+```
+Wir haben hier eine simple Liste angelegt, die unsere vier Menüeinträge
+beinhaltet. Diese können wir nun ausgeben lassen:
+    
+```python
+In [2]: for item in menu:
+   ...:     print(item)
+   ...:     
+1  Eintrag hinzufügen
+2  Eintrag löschen
+3  Eintrag suchen
+4  Beenden
+```
+    

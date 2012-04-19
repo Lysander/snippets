@@ -477,7 +477,8 @@ Und vor allem wissen wir jetzt endlich genug, um unser eigentliches Problem
 lösen zu können!
 
 
--- Füge zusammen, was zusammen gehört
+Füge zusammen, was zusammen gehört
+----------------------------------
 
 Bisher bestand Menüstruktur lediglich aus den Strings der Menüeinträge. Diese
 Struktur wollen wir nun erweitern, um unsere Funktionen auch strukturiert zu
@@ -728,7 +729,8 @@ hinzufügen kann, ohne an mehreren Stellen im Code Änderungen vornehmen zu
 müssen.
 
 
--- Auf der Zielgeraden
+Auf der Zielgeraden
+-------------------
 
 Wenn wir ganz pedantisch sein wollen, dann fehlt noch jegliche 
 Plausibilitätsprüfung der Benutzereingaben. In der ersten naiven Fassung
@@ -752,7 +754,7 @@ def handle_menu(menu):
 Es fehlt auch noch die Überprüfung, ob der Benutzer einen Buchstaben oder sonst
 ein Zeichen eingibt.
 
-Diese Details sind im Modul (simplemenu.py)[simplemenu.py] zu finden. Dort
+Diese Details sind im Modul (simplemenu.py)[/simplemenu.py] zu finden. Dort
 habe ich die Funktionen der Ausgabe und der Benutzereingabe auch noch in
 separate Funktionen ausgelagert. Insgesamt findet man dort genau das hier
 besprochene in einem Modul.

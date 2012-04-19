@@ -485,7 +485,7 @@ In [39]: l[0]()
 Bin in foo
 ```
 Ok, wir wollen ja die Funktion auch nicht löschen ;-) Aber nun wissen wir
-schon mal einiges über Objekte und deren Verwaltung in Pyton.
+schon mal einiges über Objekte und deren Verwaltung in Python.
 
 Und vor allem wissen wir jetzt endlich genug, um unser eigentliches Problem 
 lösen zu können!

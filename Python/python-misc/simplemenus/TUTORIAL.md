@@ -553,7 +553,7 @@ Ihre Wahl: 3
 In [60]: menufuncs[choice-1]()
 Eintrag wird gelöscht
 ```
-Eigentlich exakt so, wie angedacht. Wir müssen nun die passende Funktion
+Eigentlich exakt so, wie angedacht. Wir müssen nur die passende Funktion
 heraussuchen und mittels `()` aufrufen. Fertig. Heißa! Nie wieder stupide
 `if...elif`-Konstrukte :-)
 

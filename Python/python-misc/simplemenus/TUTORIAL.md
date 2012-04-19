@@ -756,16 +756,16 @@ Es fehlt auch noch die Überprüfung, ob der Benutzer einen Buchstaben oder sons
 ein Zeichen eingibt.
 
 Diese Details sind im Modul 
-(simplemenu.py)[https://github.com/Lysander/snippets/blob/master/Python/python-misc/simplemenus/simplemenu.py] 
+[simplemenu.py](https://github.com/Lysander/snippets/blob/master/Python/python-misc/simplemenus/simplemenu.py) 
 zu finden. Dort habe ich die Funktionen der Ausgabe und der Benutzereingabe 
 auch noch in separate Funktionen ausgelagert. Insgesamt findet man dort genau 
 das hier besprochene in einem Modul.
 
 Anschließend kann man sich die Module
 
-    -  `submenu.py`,
-    -  `metamenu.py`
-    -  und `classymenu.py`
+    -  [submenu.py](/submenu.py)
+    -  [/metamenu.py]
+    -  `classymenu.py`
 
 ansehen. In den ersten beiden handelt es sich nur um geringfügige Abweichungen
 von dem hier vorgestellten Schema.

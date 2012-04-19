@@ -184,13 +184,15 @@ interpretieren.
 Auf jeden Fall können wir festhalten, dass alle diese Daten im Moment nicht
 zusammengehörig sind; sie existieren lose gekoppelt in der `menu`-Funktion.
 Wir erinneren uns an meine Änderungen - ich musste an mehreren Stellen im Code
-etwas ändern, da Daten hinzugekommen sind.
+etwas ändern, wenn neue Daten hinzugekommen sind.
 
 Wieso fassen wir diese nicht einfach in eine Struktur zusammen und 
 *"berechnen"* aus dieser Struktur den Menüaufbau, die möglichen Eingaben
 und die aufzurufenden Funktionen?
 
 Antwort: Weil das furchtbar kompliziert und wenig greifbar klingt... :-(
+
+Keine Angst, das ist leichter als man denkt! Gehen wir es an...
 
 Schauen wir uns doch mal ein einfaches Beispiel an:
     
@@ -216,9 +218,11 @@ In [2]: for item in menu:
 ```
 Ich benutze die Shell [IPython](http://ipython.org/) für meine Snippets. Also
 sei nicht durch die `[2]` verwirrt, das ist lediglich Teil der Ausgabe
-von IPython.
+von IPython. Aber man kann damit auch prima Code-Stellen referenzieren. Mein
+Tipp an Dich lautet also: Schau Dir IPython mal an! (Du kannst natürlich mit
+jeder anderen Python-Shell arbeiten)
 
-Ok, also wir können also Listen einfach ausgeben. Aber was haben wir jetzt
+Ok, also wir können Listen einfach ausgeben. Aber was haben wir jetzt
 dadurch gewonnen? Im Moment noch nicht viel.
 
 Denken wir noch einmal an unseren ersten Versuch zurück. Bei Änderungen musste
@@ -338,11 +342,11 @@ Wir haben bisher nur Strings in unserer Menü-Liste gespeichert, möglich sind
 aber auch Integer-, Float- oder auch boolsche Werte. Man kann es noch viel
 drastischer und präziser formulieren:
     
-Eine Liste kann in Python **jedes** beliebige Objekt aufnehmen!
+> Eine Liste kann in Python **jedes** beliebige Objekt aufnehmen!
 
 Ist eine Funktion denn ein Objekt?
 
-Ja, denn in Python ist **alles** ein Objekt. Also auch Funktionen.
+> Ja, denn in Python ist **alles** ein Objekt. Also auch Funktionen.
 
 Schauen wir uns das mal an:
     

@@ -3,7 +3,9 @@ Tutorial für das Erstellen von einfachen Textmenüs
 ==================================================
 
 In diesem kleinen Tutorial möchte ich die Entwicklung eines Menüsystems für
-einfache CLI Programme in Python beschreiben.
+einfache CLI Programme in Python beschreiben. Ich verwende Python 3.2. Aber
+auch wenn Du Python 2.7 verwendest, solltest Du das meiste ohne größere
+Änderungen nachvollziehen können.
 
 Viele Anfänger stehen vor dem Problem, zur Steuerung ihrer typischen kleinen
 einsteigerfreundlichen Tools - wie Adressverwaltungen, Telefonbücher, TODO-
@@ -342,11 +344,13 @@ Wir haben bisher nur Strings in unserer Menü-Liste gespeichert, möglich sind
 aber auch Integer-, Float- oder auch boolsche Werte. Man kann es noch viel
 drastischer und präziser formulieren:
     
-> Eine Liste kann in Python **jedes** beliebige Objekt aufnehmen!
+> Python Guru: "Eine Liste kann in Python **jedes** beliebige Objekt 
+> aufnehmen!"
 
 Ist eine Funktion denn ein Objekt?
 
-> Ja, denn in Python ist **alles** ein Objekt. Also auch Funktionen.
+> Python Guru: "Ja, denn in Python ist **alles** ein Objekt. Also auch 
+> Funktionen.
 
 Schauen wir uns das mal an:
     
@@ -368,10 +372,12 @@ Ich schreibe mir in `[11]` eine einfache Funktion, die nichts macht außer
 einen Text zu printen. In `[14]` habe ich mir mittels der `type`-Funktion
 einmal den Typen des Objektes ausgeben lassen, welches an den Namen `foo`
 gebunden ist. Offensichtlich ist der Typ vom Typ `function`. Das kann man auch
-in der offiziellen Doku in Abschnitt 4.11.4 nachlesen.
+in der offiziellen Doku in 
+[Abschnitt 4.11.4](http://docs.python.org/py3k/library/stdtypes.html#functions) 
+nachlesen.
 
 In `[15]` prüfe ich, ob das Objekt hinter `foo` vom (Sub-)Typ `object` ist.
-`object` stellt den obersten Typen in der Typhirarchie dar. Eine Funktion ist
+`object` stellt den obersten Typen in der Typhierarchie dar. Eine Funktion ist
 also auch vom Typ `object`, genauso wie z.B. ein Integer:
 
 ```python    
@@ -508,10 +514,10 @@ In [51]: menufuncs = [
 ```
 
 Die Einträge ausgeben lassen können wir ja bereits (vgl. `[6]`). Aber wie
-können wir nun unsere Funktionen passend zur Benutzerauswahl ausgeben lassen?
+können wir nun unsere Funktionen passend zur Benutzerauswahl aufrufen?
 
-Ganz einfache: Der Benutzer wählt ja bereits einen *Index* aus; genau diesen
-können wir doch einfach benutzen, um auf den passenden Listeneintrag unserer
+Ganz einfach: Der Benutzer wählt ja bereits einen *Index* aus; genau diesen
+können wir doch benutzen, um auf den passenden Listeneintrag unserer
 Funktionsliste `menufuncs` zuzugreifen!
 
 Simulieren wir das einmal:
@@ -642,7 +648,9 @@ Beginn darauf gekommen, wie man es besser machen kann?
 Wir wollten ja unsere Daten **zusammenfassen**. Wir haben bisher zwar die
 Menüdaten *strukturiert*, aber eben noch nicht stark *gekoppelt*. Beide
 "Datentypen" sind noch in zwei separaten Strukturen abgelegt. Die Verbindung
-entsteht eigentlich nur implizit über denselben Index.
+entsteht eigentlich nur implizit über denselben Index. Das zweite Item der
+Menüeinträge passt also zum zweiten Eintrag in der Funkionsliste. Bei längeren
+Listen kann man sich da schnell mal "verzählen" und es kommt zu obigen Fehlern.
 
 Wieso koppeln wir nicht "Text" und "Funktion" direkt zusammen? Wir könnten
 doch einfach eine Liste von Paaren bilden...
@@ -685,7 +693,8 @@ Anstelle von zwei Listen übergeben wir unsere Menüdefinition nun als einen
 einzelnen Parameter. Zur Ausgabe benennen wir `text` in `item` um, da das
 Listenelement tatsächlich ja das Paar aus Text und Funktion beinhaltet. Ergo
 greifen wir in der `format`-Methode auf den `0` Index zu, in dem der Text 
-steht. Beim Aufruf ergänzen wir den zweiten Indexzugriff auf den `1` Index.
+steht. Beim Aufruf der Funktion in der letzten Zeile ergänzen wir den zweiten 
+Indexzugriff auf den `1` Index.
 
 That's it :-)
 
@@ -712,6 +721,11 @@ Und wenn wir nun wiederum Einträge hinzufügen oder tauschen wollen, so müssen
 wir das nur an einer Stelle, nämlich unserer Menüdefinition. Beim Tauschen
 können wir ganze Tupel ausschneiden und kopieren; somit ist es fast 
 auszuschließen, dass wir Text und Funktion nicht zusammenpassend definieren.
+
+Und auch das Suchen von Fehlern wird einfacher. Wir brauchen nicht an zwei 
+separaten Stellen gucken, ob nun der Menütext falsch definiert war oder aber 
+der Fehler an einem falschen Funktionseintrag lag. Vergleiche das auch einmal
+mit der ursprünglichen, naiven Fassung!
 
 ```python 
 menu = [

@@ -169,8 +169,12 @@ zusammenfassen!
 Benutze Datenstrukturen
 ------------------------
 
-Python bietet einem von Hause aus einige sehr praktische Datenstrukturen an.
-Mit Hilfe solcher Strukturen, kann man Daten strukturieren.
+Python bietet einem von Hause aus einige sehr praktische Datenstrukturen an,
+wie z.B. Listen, Dictionaries, Tupel und Sets. Mit Hilfe solcher Strukturen, 
+kann man Daten strukturieren. Für dieses Tutorial solltest Du auf jeden
+Fall die Grundkenntnisse über 
+[Listen](http://docs.python.org/py3k/tutorial/introduction.html#lists)
+haben.
 
 Welche Daten können wir denn in unserem Menü bisher identifizieren?
 
@@ -206,7 +210,7 @@ menu = [
     "4  Beenden"
 ]
 ```
-Wir haben hier eine simple Liste angelegt, die unsere vier Menüeinträge
+Wir haben hier eine simple **Liste** angelegt, die unsere vier Menüeinträge
 beinhaltet. Diese können wir nun ausgeben lassen:
     
 ```python

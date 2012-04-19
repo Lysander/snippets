@@ -763,9 +763,9 @@ das hier besprochene in einem Modul.
 
 Anschließend kann man sich die Module
 
-    -  [submenu.py](/submenu.py)
-    -  [/metamenu.py]
-    -  `classymenu.py`
+- `submenu.py`
+- `/metamenu.py`
+- `classymenu.py`
 
 ansehen. In den ersten beiden handelt es sich nur um geringfügige Abweichungen
 von dem hier vorgestellten Schema.

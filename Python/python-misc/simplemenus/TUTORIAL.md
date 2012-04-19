@@ -568,21 +568,21 @@ def handle_menu(texts, funcs):
         funcs[choice]()
 ```
 Sieht doch recht handlich aus. Wir ziehen die `1` hier einfach direkt von der
-Nutzereingabe ab, da sieht dann beim Indexzugriff übersichtlicher aus und
+Nutzereingabe ab, das sieht dann beim Indexzugriff übersichtlicher aus und
 wir brauchen die "verfälschte" Eingabe ja auch nicht weiter.
 Testen wir das einmal:
 
 ```python 
 In [64]: handle_menu(menutexts, menufuncs)
 1  Eintrag hinzufügen
-2  Eintrag löschen
-3  Eintrag suchen
+2  Eintrag suchen
+3  Eintrag löschen
 4  Beenden
 Ihre Wahl? 1
 Eintrag wird hinzugefügt
 1  Eintrag hinzufügen
-2  Eintrag löschen
-3  Eintrag suchen
+2  Eintrag suchen
+3  Eintrag löschen
 4  Beenden
 Ihre Wahl? 3
 Eintrag wird gelöscht
@@ -630,7 +630,7 @@ Eintrag wird gelöscht
 ```
 Oha. Verdammt! Wir haben bei den Texten die Optionen zwei und drei getauscht,
 aber vergessen dieses auch bei den Funktionen umzusetzen. Ein Glück kann bei
-unserem Demo-Funktionen nicht viel passieren!
+unseren Demo-Funktionen nicht viel passieren!
 
 So ganz optimal ist unsere Struktur nicht. Vielleicht bist Du ja schon zu 
 Beginn darauf gekommen, wie man es besser machen kann?
@@ -715,9 +715,10 @@ menu = [
     # Einträge getauscht
     ["Eintrag löschen", remove_entry],
     ["Eintrag suchen", search_entry],
-    #
+    # neue Einträge
     ["Telefonbuch laden", load],
     ["Telefonbuch speichern", save],
+    # den gab es schon ;-)
     ["Beenden", quit]
 ]
 ```
@@ -754,7 +755,23 @@ def handle_menu(menu):
 Es fehlt auch noch die Überprüfung, ob der Benutzer einen Buchstaben oder sonst
 ein Zeichen eingibt.
 
-Diese Details sind im Modul (simplemenu.py)[/simplemenu.py] zu finden. Dort
-habe ich die Funktionen der Ausgabe und der Benutzereingabe auch noch in
-separate Funktionen ausgelagert. Insgesamt findet man dort genau das hier
-besprochene in einem Modul.
+Diese Details sind im Modul 
+(simplemenu.py)[https://github.com/Lysander/snippets/blob/master/Python/python-misc/simplemenus/simplemenu.py] 
+zu finden. Dort habe ich die Funktionen der Ausgabe und der Benutzereingabe 
+auch noch in separate Funktionen ausgelagert. Insgesamt findet man dort genau 
+das hier besprochene in einem Modul.
+
+Anschließend kann man sich die Module
+
+    -  `submenu.py`,
+    -  `metamenu.py`
+    -  und `classymenu.py`
+
+ansehen. In den ersten beiden handelt es sich nur um geringfügige Abweichungen
+von dem hier vorgestellten Schema.
+
+In `classymenu.py` führe ich eine Klasse ein, die sich um die Darstellung und 
+Auswertung eines Menüs kümmert.
+
+Ich hoffe dieses Tutorial ist Dir hilfreich gewesen. Wenn es Dir gefallen hat,
+sag es weiter, wenn nicht, sag es **mir**!

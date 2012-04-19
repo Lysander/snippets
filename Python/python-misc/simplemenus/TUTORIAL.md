@@ -34,7 +34,7 @@ Man sieht recht häufig Code wie diesen:
 
 ```python
 def menu():
-    while True
+    while True:
         print(
             "1  Eintrag hinzufügen",
             "2  Eintrag löschen",

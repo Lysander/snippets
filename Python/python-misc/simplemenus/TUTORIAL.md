@@ -215,7 +215,7 @@ In [2]: for item in menu:
 4  Beenden
 ```
 Ich benutze die Shell [IPython](http://ipython.org/) für meine Snippets. Also
-sei nicht durch die `[2\]` verwirrt, das ist lediglich Teil der Ausgabe
+sei nicht durch die `[2]` verwirrt, das ist lediglich Teil der Ausgabe
 von IPython.
 
 Ok, also wir können also Listen einfach ausgeben. Aber was haben wir jetzt
@@ -421,10 +421,8 @@ Bin in bar
 ```
 In `[26]` habe ich nun die Klammern `()` hinter meinen Indexzugriff geschrieben.
 Python weiß nun, dass ich das Objekt hinter dem Index *aufrufen* möchte und tut
-das auch.
-
-Ich kann auch in einer Schleife über alle Funktionsobjekte in meiner Liste
-iterieren und jedes einzeln aufrufen, wie in `[27]` zu sehen ist.
+das auch. Ich kann auch in einer Schleife über alle Funktionsobjekte in meiner 
+Liste iterieren und jedes einzeln aufrufen, wie in `[27]` zu sehen ist.
 
 Moment. In Kopf der Schleife binde ich bei jedem Durchlauf das aktuelle
 Funktionsobjekt an den Namen `func`... so etwas geht?
@@ -473,8 +471,286 @@ In [39]: l[0]()
 Bin in foo
 ```
 Ok, wir wollen ja die Funktion auch nicht löschen ;-) Aber nun wissen wir
-schon mal einiges über Objkte und deren Verwaltung in Pyton.
+schon mal einiges über Objekte und deren Verwaltung in Pyton.
 
-Und vor allem wissen wir jetzt endlich genug, um unsere eigentliches Problem 
+Und vor allem wissen wir jetzt endlich genug, um unser eigentliches Problem 
 lösen zu können!
 
+
+-- Füge zusammen, was zusammen gehört
+
+Bisher bestand Menüstruktur lediglich aus den Strings der Menüeinträge. Diese
+Struktur wollen wir nun erweitern, um unsere Funktionen auch strukturiert zu
+speichern.
+
+Wie wäre es damit:
+
+```python 
+In [47]: def add_entry(): print("Eintrag wird hinzugefügt")
+
+In [48]: def search_entry(): print("Eintrag wird gesucht")
+
+In [49]: def remove_entry(): print("Eintrag wird gelöscht")
+
+In [50]: def quit(): print("Beende das Programm")
+
+In [51]: menufuncs = [
+   ....: add_entry,
+   ....: search_entry,
+   ....: remove_entry,
+   ....: quit
+   ....: ]
+```
+
+Die Einträge ausgeben lassen können wir ja bereits (vgl. `[6]`). Aber wie
+können wir nun unsere Funktionen passend zur Benutzerauswahl ausgeben lassen?
+
+Ganz einfache: Der Benutzer wählt ja bereits einen *Index* aus; genau diesen
+können wir doch einfach benutzen, um auf den passenden Listeneintrag unserer
+Funktionsliste `menufuncs` zuzugreifen!
+
+Simulieren wir das einmal:
+    
+```python 
+In [55]: choice = 3
+
+In [57]: menufuncs[3-1]
+Out[57]: <function __main__.remove_entry>
+
+In [56]: menufuncs[3-1]()
+Eintrag wird gelöscht
+```
+Nehmen wir an, der Benutzer wählt Menüpunkt Nummer drei aus, dann wollen wir 
+auch die dritte Funktion aufrufen, die unter dem Index **zwei** zu finden ist
+(weil bei Python Indexe immer bei `0` anfangen!). Also müssen wir von `choice`
+immer noch `1` abziehen.
+
+Aber entscheidend ist doch, dass wir einfach basierend auf der reinen 
+Benutzereingabe und einem trivialen Indexzugriff die richtige Funktion
+aufrufen können! Damit können wir uns die ganzen `if...elif`-Kaskaden sparen.
+
+Überlegen wir uns mal, wie wir das umsetzen können...
+
+```python 
+In [59]: choice = int(input("Ihre Wahl: "))
+Ihre Wahl: 3
+
+In [60]: menufuncs[choice-1]()
+Eintrag wird gelöscht
+```
+Eigentlich exakt so, wie angedacht. Wir müssen nun die passende Funktion
+heraussuchen und mittels `()` aufrufen. Fertig. Heißa! Nie wieder stupide
+`if...elif`-Konstrukte :-)
+
+Fügen wir doch mal alles in einer Funktion zusammen:
+
+```python 
+menutexts = [
+    "Eintrag hinzufügen",
+    "Eintrag suchen",
+    "Eintrag löschen",
+    "Beenden"
+]
+
+menufuncs = [
+    add_entry,
+    search_entry,
+    remove_entry,
+    quit
+]
+
+def handle_menu(texts, funcs):
+    while True:
+        for index, text in enumerate(texts, 1):
+            print("{}  {}".format(index, text))
+        choice = int(input("Ihre Wahl? "))
+        funcs[choice-1]()
+```
+Sieht doch recht handlich aus. Testen wir das einmal:
+
+```python 
+In [64]: handle_menu(menutexts, menufuncs)
+1  Eintrag hinzufügen
+2  Eintrag löschen
+3  Eintrag suchen
+4  Beenden
+Ihre Wahl? 1
+Eintrag wird hinzugefügt
+1  Eintrag hinzufügen
+2  Eintrag löschen
+3  Eintrag suchen
+4  Beenden
+Ihre Wahl? 3
+Eintrag wird gelöscht
+```
+Prima :-) Es klappt genauso, wie wir uns das mühsam zusammengereimt haben.
+
+Aber halt... was passiert denn nun, wenn wir wieder Funktionen hinzufügen
+wollen? Hält unserer Konzept dieser Anforderung stand?
+
+```python 
+def load(): print("Datensatz wird geladen")
+
+def save(): print("Datensatz wird gespeichert")
+
+menutexts = [
+    "Eintrag hinzufügen",
+    "Eintrag löschen",
+    "Eintrag suchen",
+    "Telefonbuch speichern",
+    "Telefonbuch laden",
+    "Beenden"
+]
+
+menufuncs = [
+    add_entry,
+    search_entry,
+    remove_entry,
+    save,
+    load,
+    quit
+]
+```
+Nicht wirklich etwas neues... also testen wir es mal:
+
+```python 
+In [71]: handle_menu(menutexts, menufuncs)
+1  Eintrag hinzufügen
+2  Eintrag löschen
+3  Eintrag suchen
+4  Telefonbuch speichern
+5  Telefonbuch laden
+6  Beenden
+Ihre Wahl? 3
+Eintrag wird gelöscht
+```
+Oha. Verdammt! Wir haben bei den Texten die Optionen zwei und drei getauscht,
+aber vergessen dieses auch bei den Funktionen umzusetzen. Ein Glück kann bei
+unserem Demo-Funktionen nicht viel passieren!
+
+So ganz optimal ist unsere Struktur nicht. Vielleicht bist Du ja schon zu 
+Beginn darauf gekommen, wie man es besser machen kann?
+
+Wir wollten ja unsere Daten **zusammenfassen**. Wir haben bisher zwar die
+Menüdaten *strukturiert*, aber eben noch nicht stark *gekoppelt*. Beide
+"Datentypen" sind noch in zwei separaten Strukturen abgelegt. Die Verbindung
+entsteht eigentlich nur implizit über denselben Index.
+
+Wieso koppeln wir nicht "Text" und "Funktion" direkt zusammen? Wir könnten
+doch einfach eine Liste von Paaren bilden...
+
+```python 
+menu = [
+    ["Eintrag hinzufügen", add_entry],
+    ["Eintrag suchen", search_entry],
+    ["Eintrag löschen", remove_entry],
+    ["Beenden", quit]
+]
+```
+Für den Zugriff können wir nach wie vor über den Index gehen, erhalten 
+darunter aber wiederum eine Liste, die aus zwei Elementen besteht. Index `0`
+beheimatet den Menütext, Index `1` die aufzurufende Funktion:
+
+```python 
+In [73]: menu[1]
+Out[73]: ['Eintrag suchen', <function __main__.search_entry>]
+
+In [74]: menu[1][0]
+Out[74]: 'Eintrag suchen'
+
+In [75]: menu[1][1]()
+Eintrag wird gesucht
+```
+Wunderbar einfach :-)
+
+Schauen wir uns mal die nötigen Änderungen in `handle_menu` an:
+
+```python 
+def handle_menu(menu):
+    while True:
+        for index, item in enumerate(menu, 1):
+            print("{}  {}".format(index, item[0]))
+        choice = int(input("Ihre Wahl? "))
+        menu[choice-1][1]()
+```
+Anstelle von zwei Listen übergeben wir unsere Menüdefinition nun als einen
+einzelnen Parameter. Zur Ausgabe benennen wir `text` in `item` um, da das
+Listenelement tatsächlich ja das Paar aus Text und Funktion beinhaltet. Ergo
+greifen wir in der `format`-Methode auf den `0` Index zu, in dem der Text 
+steht. Beim Aufruf ergänzen wir den zweiten Indexzugriff auf den `1` Index.
+
+That's it :-)
+
+Zeit zu testen:
+
+```python 
+In [80]: handle_menu(menu)
+1  Eintrag hinzufügen
+2  Eintrag suchen
+3  Eintrag löschen
+4  Beenden
+Ihre Wahl? 2
+Eintrag wird gesucht
+1  Eintrag hinzufügen
+2  Eintrag suchen
+3  Eintrag löschen
+4  Beenden
+Ihre Wahl? 1
+Eintrag wird hinzugefügt
+```
+Cool :-)
+
+Und wenn wir nun wiederum Einträge hinzufügen oder tauschen wollen, so müssen
+wir das nur an einer Stelle, nämlich unserer Menüdefinition. Beim Tauschen
+können wir ganze Tupel ausschneiden und kopieren; somit ist es fast 
+auszuschließen, dass wir Text und Funktion nicht zusammenpassend definieren.
+
+```python 
+menu = [
+    ["Eintrag hinzufügen", add_entry],
+    # Einträge getauscht
+    ["Eintrag löschen", remove_entry],
+    ["Eintrag suchen", search_entry],
+    #
+    ["Telefonbuch laden", load],
+    ["Telefonbuch speichern", save],
+    ["Beenden", quit]
+]
+```
+Wie man sieht, ist das ziemlich **übersichtlich** und **flexibel**! Genau das 
+wollten wir ja erreichen. Der Code für die eigentliche Menüführung hat nun
+genau sechs Zeilen (`handle_menu`). Die Daten sind nun davon getrennt.
+Zudem sind sie schön kompakt zusammengefasst, so dass man leicht neue Einträge
+hinzufügen kann, ohne an mehreren Stellen im Code Änderungen vornehmen zu
+müssen.
+
+
+-- Auf der Zielgeraden
+
+Wenn wir ganz pedantisch sein wollen, dann fehlt noch jegliche 
+Plausibilitätsprüfung der Benutzereingaben. In der ersten naiven Fassung
+hatten wir noch diese hübsche Ausgabe, wenn der Benutzer einen Index außerhalb
+des gültigen Bereichs wählt. Das können wir aber leicht einbauen, indem wir
+mittels `range` und `len` eine Indexliste erstellen und mittels `in` prüfen,
+ob die Eingabe darin liegt:
+    
+```python 
+def handle_menu(menu):
+    while True:
+        for index, item in enumerate(menu, 1):
+            print("{}  {}".format(index, item[0]))
+        choice = int(input("Ihre Wahl? "))
+        # Wir müssen wieder 1 subtrahieren, damit der Vergleich passt
+        if choice-1 in range(len(menu)):
+            menu[choice-1][1]()
+        else:
+            print("Bitte nur Zahlen im Bereich 1 - {} eingeben".format(
+                                                                    len(menu)))
+```
+Es fehlt auch noch die Überprüfung, ob der Benutzer einen Buchstaben oder sonst
+ein Zeichen eingibt.
+
+Diese Details sind im Modul (simplemenu.py)[simplemenu.py] zu finden. Dort
+habe ich die Funktionen der Ausgabe und der Benutzereingabe auch noch in
+separate Funktionen ausgelagert. Insgesamt findet man dort genau das hier
+besprochene in einem Modul.

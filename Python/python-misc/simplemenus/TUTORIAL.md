@@ -791,5 +791,5 @@ von dem hier vorgestellten Schema.
 In `classymenu.py` führe ich eine Klasse ein, die sich um die Darstellung und 
 Auswertung eines Menüs kümmert.
 
-Ich hoffe dieses Tutorial ist Dir hilfreich gewesen. Wenn es Dir gefallen hat,
-sag es weiter, wenn nicht, sag es **mir**!
+Ich hoffe dieses Tutorial ist hilfreich für Dich gewesen. Wenn es Dir gefallen 
+hat, sag es weiter, wenn nicht, sag es **mir**!

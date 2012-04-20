@@ -907,7 +907,7 @@ bekommmen wir über die `len`-Funktion einfach heraus. Beachte, dass die `0`
 ja immer fixiert ist durch unser Nummerierungsschema. Auch hier müssen wir 
 darauf achten, dass wir `1` vom eingegebenen Menüindex abgezogen haben, um das 
 bei `0` beginnende Indexschema von Pythons Datenstrukturen zu erfüllen. Also
-muss unsere untere Schranke bei `1` beginnen und die obere ist die Anzahl der
+muss unsere untere Schranke bei `0` beginnen und die obere ist die Anzahl der
 Menüeinträge - `1`. Da wir die obere Schranke *exklusiv* definiert haben (also
 nur `<`, nicht `<=`) passt das auch ohne die `-1`.
 

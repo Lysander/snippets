@@ -905,8 +905,11 @@ Genau das ist unsere Bedingung, nur dass wir keine feste obere Schranke wie die
 `10` haben, sondern hier die Anzahl der Menüeinträge benutzen müssen. Die 
 bekommmen wir über die `len`-Funktion einfach heraus. Beachte, dass die `0`
 ja immer fixiert ist durch unser Nummerierungsschema. Auch hier müssen wir 
-darauf achten, dass wir `1` vom eingegebenen Menüindex abziehen, um das bei
-`0` beginnende Indexschema von Pythons Datenstrukturen zu erfüllen.
+darauf achten, dass wir `1` vom eingegebenen Menüindex abgezogen haben, um das 
+bei `0` beginnende Indexschema von Pythons Datenstrukturen zu erfüllen. Also
+muss unsere untere Schranke bei `1` beginnen und die obere ist die Anzahl der
+Menüeinträge - `1`. Da wir die obere Schranke *exklusiv* definiert haben (also
+nur `<`, nicht `<=`) passt das auch ohne die `-1`.
 
 Damit ergibt sich unsere neue `handle_menu`-Funktion wie folgt:
     

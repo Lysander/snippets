@@ -879,8 +879,36 @@ Wenn wir ganz pedantisch sein wollen, dann fehlt noch jegliche
 Plausibilitätsprüfung der Benutzereingaben. In der ersten naiven Fassung
 hatten wir noch diese hübsche Ausgabe, wenn der Benutzer einen Index außerhalb
 des gültigen Bereichs wählt. Das können wir aber leicht einbauen, indem wir
-mittels `range` und `len` eine Indexliste erstellen und mittels `in` prüfen,
-ob die Eingabe darin liegt:
+prüfen, ob die Eingabe des Benutzers in den Schranken zwischen `0` 
+einschließlich und der Anzahl an Menüitems liegt.
+
+Du kennst das sicherlich aus der Mathematik. Dort schreibt man auch häufig
+Sachen wie `x >= 0 /\ x < 10` wenn `x` Werte aus der Menge `{0, 1, 2, ..., 9}`
+annehmen darf. Das kommt z.B. bei der Formulierung eines Definitionsbereichs
+oder eines Wertebereichs bei Kurvendiskussionen vor. Ich kann das ganze auch
+noch in einen Ausdruck zusammenziehen, der dann so aussähe: `0 <= x < 10`.
+
+In Python sieht das exakt genauso aus :-)
+
+```python 
+In [49]: x = 4
+
+In [50]: 0 <= x < 10
+Out[50]: True
+
+In [51]: x = 10
+
+In [52]: 0 <= x < 10
+Out[52]: False
+```
+Genau das ist unsere Bedingung, nur dass wir keine feste obere Schranke wie die
+`10` haben, sondern hier die Anzahl der Menüeinträge benutzen müssen. Die 
+bekommmen wir über die `len`-Funktion einfach heraus. Beachte, dass die `0`
+ja immer fixiert ist durch unser Nummerierungsschema. Auch hier müssen wir 
+darauf achten, dass wir `1` vom eingegebenen Menüindex abziehen, um das bei
+`0` beginnende Indexschema von Pythons Datenstrukturen zu erfüllen.
+
+Damit ergibt sich unsere neue `handle_menu`-Funktion wie folgt:
     
 ```python 
 def handle_menu(menu):
@@ -888,7 +916,7 @@ def handle_menu(menu):
         for index, item in enumerate(menu, 1):
             print("{}  {}".format(index, item[0]))
         choice = int(input("Ihre Wahl? ")) - 1
-        if choice in range(len(menu)):
+        if 0 <= choice < len(menu):
             menu[choice][1]()
         else:
             print("Bitte nur Zahlen im Bereich 1 - {} eingeben".format(

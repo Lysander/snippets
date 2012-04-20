@@ -469,7 +469,9 @@ Bin in foo
 Ich kann also meine Funktion `foo` an einen anderen Namen binden!
 
 Jetzt ist auch klar, was der Großmeister oben damit meinte, als er sagte
+
 > "Alles, was man an einen Namen binden kann, ist ein Objekt"
+
 Damit meinte er genau solche Zuweisungen.
 
 Ich kann so etwas machen:

@@ -81,7 +81,7 @@ Schauen wir uns die Stellen im einzelnen an:
             sep="\n"
         )
 ```
-Aha. Ich musste also zwischen meinen dritten und bis dato vierten Eintrag
+Aha. Ich musste also zwischen meinem dritten und bis dato vierten Eintrag
 etwas dazuschreiben. Ich muss dann noch daran denken, dass ich den Eintrag
 "Beenden" nun mit der "6" nummeriere.
 

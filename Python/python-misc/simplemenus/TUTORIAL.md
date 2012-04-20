@@ -327,7 +327,7 @@ In [9]: for index, item in enumerate(menu, 1):
 Prima. Ich habe eine hübsche Menüausgabe, bei der der Index automatisch
 *berechnet* wird. Nie wieder manuell Indexe ändern!!! :-)
 
-Wir haben nun also Die Menüeinträge in einer Datenstruktur organisiert und die
+Wir haben nun also die Menüeinträge in einer Datenstruktur organisiert und die
 Indexe komplett aus den Daten eleminiert, da wir diese direkt aus den 
 Einträgen berechnen können.
 
@@ -754,6 +754,76 @@ müssen.
 
 Auf der Zielgeraden
 -------------------
+
+Bisher haben wir ausschließlich Listen für die Verwaltung unserer 
+Menüdefinition verwendet. An dieser Stelle kann man noch optimieren. Da wir die
+Paare aus Text und Funktion immer zusammmen erstellen und eigentlich nicht
+mehr ändern wollen, können wir dafür auch den Datentyp `tuple` verwenden.
+Dieser verhällt sich exakt so wie eine Liste, außer, dass man Tupel-Objekte
+nach dem Anlegen nicht mehr ändern kann. Hier mal eine kleine Übersicht:
+
+```python 
+In [2]: l = list()
+
+In [3]: l.
+l.append   l.extend   l.insert   l.remove   l.sort     
+l.count    l.index    l.pop      l.reverse  
+
+In [3]: t = tuple()
+
+In [4]: t.
+t.count  t.index  
+```
+Ich erkenne, dass ein Tupel wie eine stark abgespeckte Liste funktioniert.
+Aber wir haben ja außer dem Indexzugriff keine Methode verwendet! 
+
+Die hübsche Übersicht bekomme ich übrigens dank IPython. In `[3]` drücke ich 
+einfach nach dem `l.` die Tabulator-Taste und IPython schlägt mir mögliche
+Methoden vor, die ich nun auf dem Objekt, welches an `l` gebunden ist,
+aufrufen kann. Eine tolle Möglichkeit, sich einen kurzen Überblick zu 
+verschaffen. Das nur als weitere kleine Werbung für IPython ;-)
+
+Wir können unseren Code bei der Definition einer Menüstruktur einfach auf Tupel 
+umstellen, ohne dass wir an unserer `handle_menu`-Funktion etwas ändern müssen.
+
+Hier mal ein kleines Beispiel:
+
+```python 
+In [10]: t = 1, 2, 3
+
+In [11]: t.append(4)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+/home/nelson/src/snippets/Python/python-misc/simplemenus/<ipython-input-11-e8bd1632f9dd> in <module>()
+----> 1 t.append(4)
+
+AttributeError: 'tuple' object has no attribute 'append'
+
+In [12]: t = ("Hallo", "Welt")
+
+In [13]: for item in t:
+   ....:     print(item)
+   ....:     
+Hallo
+Welt
+
+In [14]: t[1]
+Out[14]: 'Welt'
+```
+Man erkennt Tupel an den runden Klammern, die man aber auch bei einer flachen
+Definition weglassen kann (`[10]`). In `[11]` teste ich mal an, ob ich nicht
+doch ein Element hinzufügen kann. Wie man sieht, geht das natürlich nicht; die
+entsprechende Methode fehlt - wie wir ja auch schon oben gesehen haben.
+Damit ist sichergestellt, dass nachträglich nichts an den Definitionen 
+geändert werden kann - egal, ob das nun unabsichtlich oder absichtlich 
+passieren soll. Wenn Du Dir ein Szenario vorstellen kannst, bei dem Änderungen
+erwünscht sind, dann kannst Du natürlich wieder auf Listen umsteigen.
+Wie man sieht funktioniert das Iterieren und der Indexzugriff exakt so wie bei
+Listen.
+
+In meinen mitgelieferten Modulen wirst Du sehen, dass ich dort Tupel verwende.
+
+So, zum Abschluss wollen wir noch etwas anders, sehr wichtiges besprechen.
 
 Wenn wir ganz pedantisch sein wollen, dann fehlt noch jegliche 
 Plausibilitätsprüfung der Benutzereingaben. In der ersten naiven Fassung

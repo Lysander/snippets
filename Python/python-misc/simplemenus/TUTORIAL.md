@@ -909,7 +909,7 @@ darauf achten, dass wir `1` vom eingegebenen Menüindex abgezogen haben, um das
 bei `0` beginnende Indexschema von Pythons Datenstrukturen zu erfüllen. Also
 muss unsere untere Schranke bei `0` beginnen und die obere ist die Anzahl der
 Menüeinträge - `1`. Da wir die obere Schranke *exklusiv* definiert haben (also
-nur `<`, nicht `<=`) passt das auch ohne die `-1`.
+nur `<`, nicht `<=`) passt das auch ohne eine zusätzliche Subtraktion.
 
 Damit ergibt sich unsere neue `handle_menu`-Funktion wie folgt:
     

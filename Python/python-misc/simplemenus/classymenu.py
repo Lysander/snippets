@@ -136,7 +136,7 @@ class Menu:
         
         All other exit-items are menu objects of the corresponding parent-menu.
         
-        The algorithm implements a breadth-depth search for handling this task.
+        The algorithm implements a breadth-first search for handling this task.
         
         :param text: string with the text of the 'Exit'-item.
         """

@@ -493,7 +493,8 @@ SyntaxError: invalid syntax (<ipython-input-36-c82c7ffef911>, line 1)
 ```
 Ein Glück gibt es das Modul `operator`, indem eine Reihe von 
 *Wrapperfunktionen* definiert sind, mit deren Hilfe man Ausdrücke anstatt mit 
-Operatoren mit Funktionen schreiben kann.
+Operatoren mit Funktionen schreiben kann. Schau es Dir einfach mal an :-)
+Für uns ist das hier nicht weiter wichtig.
 
 
 Aber es geht noch mehr:

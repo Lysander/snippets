@@ -356,6 +356,22 @@ Ist eine Funktion denn ein Objekt?
 > Python Guru: "Ja, denn in Python ist **alles** ein Objekt. Also auch 
 > Funktionen.
 
+Diese Erkenntnis müssen wir erst einmal sacken lassen...
+
+... wenn wir da nicht noch mehr Input bekämen:
+
+> Großmeister Leonidas: "'In Python ist alles ein Objekt' ist ewas ungenau. 
+> In Python ist alles ein Objekt, was man an einen Namen binden kann. 
+> Operatoren sind keine Objekte (``+.quak()``) und Syntax ist auch kein Objekt 
+> (also etwa kein ``if``-Objekt) obwohl man, wenn man nun noch extremer 
+> pedantisch sein will sich zu sowohl Operatoren (Modul ``operator``) als 
+> auch Syntax (``ast``) sich entsprechende Objekte holen kann."
+
+Ok, also ist doch nicht alles ein Objeckt, aber *fast* - und die oben 
+angesprochenen Randfälle tangieren uns hier nicht wirklich. Mal sehen, ob
+die Weisheit auf Funktionen zutrifft, denn das interessiert uns hier ja 
+eigentlich.
+
 Schauen wir uns das mal an:
     
 ```python    
@@ -451,6 +467,32 @@ In [29]: a()
 Bin in foo
 ```
 Ich kann also meine Funktion `foo` an einen anderen Namen binden!
+
+Jetzt ist auch klar, was der Großmeister oben damit meinte, als er sagte
+> "Alles, was man an einen Namen binden kann, ist ein Objekt"
+Damit meinte er genau solche Zuweisungen.
+
+Ich kann so etwas machen:
+    
+```python     
+In [33]: true = True
+
+In [34]: false = False
+
+In [35]: nil = None
+```
+Auch wenn das wenig sinnvoll ist ;-)
+
+Aber das kann ich nicht machen:
+
+```python 
+In [36]: p = +
+SyntaxError: invalid syntax (<ipython-input-36-c82c7ffef911>, line 1)
+```
+Ein Glück gibt es das Modul `operator`, indem eine Reihe von 
+*Wrapperfunktionen* definiert sind, mit deren Hilfe man Ausdrücke anstatt mit 
+Operatoren mit Funktionen schreiben kann.
+
 
 Aber es geht noch mehr:
 

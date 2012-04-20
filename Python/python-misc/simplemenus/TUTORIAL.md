@@ -774,8 +774,13 @@ In [3]: t = tuple()
 In [4]: t.
 t.count  t.index  
 ```
-Ich erkenne, dass ein Tupel wie eine stark abgespeckte Liste funktioniert.
-Aber wir haben ja außer dem Indexzugriff keine Methode verwendet! 
+Ich erkenne, dass ein Tupel wie eine stark abgespeckte Liste funktioniert. Es
+fehlen aber alle Methoden, die etwas in dem Objekt verändern. Schau Dir mal die
+Methoden genau an... es bleiben wirklich nur die übrig, die nichts verändern.
+Den Indexzugriff mittels `obj[x]` bieten aber beide Strukturen (Verwechsle das 
+nicht mit der `index`-Methode! Diese sucht den Index zu einem gegebenen Objekt
+heraus, also z.B. an welcher Stelle ein bestimmter String oder ein Integerwert
+in der Struktur steht)
 
 Die hübsche Übersicht bekomme ich übrigens dank IPython. In `[3]` drücke ich 
 einfach nach dem `l.` die Tabulator-Taste und IPython schlägt mir mögliche

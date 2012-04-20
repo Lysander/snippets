@@ -28,7 +28,7 @@
     This time we use a class to represent and handle our menu tasks.
     
     It might be understandable even for newbies, but you should have been
-    familiar to calsses in Python.
+    familiar to classes in Python.
     
     Of course the core ideas do not differ from the other, structure and
     function based approaches within this folder. As you can see a class is
@@ -136,7 +136,7 @@ class Menu:
         
         All other exit-items are menu objects of the corresponding parent-menu.
         
-        The algorithm implements a breath-depth search for handling this task.
+        The algorithm implements a breadth-depth search for handling this task.
         
         :param text: string with the text of the 'Exit'-item.
         """

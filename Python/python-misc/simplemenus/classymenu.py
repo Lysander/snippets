@@ -154,7 +154,7 @@ class Menu:
         while True:
             try:
                 choice = int(input("Ihre Wahl?: ")) - 1
-                if choice in range(len(self.context.items)):
+                if 0 <= choice < len(self.context.items):
                     return choice
                 else:
                     raise IndexError

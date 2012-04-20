@@ -123,7 +123,7 @@ def get_user_input(entries):
     while True:
         try:
             choice = int(input("Ihre Wahl?: ")) - 1
-            if choice in range(len(entries)):
+            if 0 <= choice < len(entries):
                 return choice
             else:
                 raise IndexError

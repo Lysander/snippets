@@ -88,7 +88,7 @@ def get_user_input(menu):
     while True:
         try:
             choice = int(input("Ihre Wahl?: ")) - 1
-            if choice in range(len(menu)):
+            if 0 <= choice < len(menu):
                 return choice
             else:
                 raise IndexError

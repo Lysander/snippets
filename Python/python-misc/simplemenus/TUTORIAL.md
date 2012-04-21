@@ -970,7 +970,7 @@ umgesetzt:
 - `metamenu.py`
 - `classymenu.py`
 
-ansehen. In den ersten beiden handelt es sich nur um geringfügige Abweichungen
+In den ersten beiden handelt es sich nur um geringfügige Abweichungen
 von dem hier vorgestellten Schema.
 
 In `classymenu.py` führe ich eine Klasse ein, die sich um die Darstellung und 

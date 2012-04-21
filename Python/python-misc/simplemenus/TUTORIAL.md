@@ -934,7 +934,37 @@ zu finden. Dort habe ich die Funktionen der Ausgabe und der Benutzereingabe
 auch noch in separate Funktionen ausgelagert. Insgesamt findet man dort genau 
 das hier besprochene in einem Modul.
 
-Anschließend kann man sich die Module
+Zum Abschluss packe ich noch einmal alles zusammen, so dass wir einen hübschen 
+Überblick über die Gesamtsituation haben. Vergleiche das einmal mit dem ersten 
+Ansatz!
+
+```python 
+def handle_menu(menu):
+    while True:
+        for index, item in enumerate(menu, 1):
+            print("{}  {}".format(index, item[0]))
+        choice = int(input("Ihre Wahl? ")) - 1
+        if 0 <= choice < len(menu):
+            menu[choice][1]()
+        else:
+            print("Bitte nur Zahlen im Bereich 1 - {} eingeben".format(
+                                                                    len(menu)))
+
+menu = [
+    ["Eintrag hinzufügen", add_entry],
+    ["Eintrag löschen", remove_entry],
+    ["Eintrag suchen", search_entry],
+    ["Telefonbuch laden", load],
+    ["Telefonbuch speichern", save],
+    ["Beenden", quit]
+]
+
+handle_menu(menu)
+```
+Stolz können wir uns zurücklehnen und unser Werk betrachten... oder die anderen
+Module studieren. Schließlich fehlen ja noch Dinge wie Submenüs, 
+Beschreibungen, uvm. Dies wird in den folgenden Modulen Schritt für Schritt
+umgesetzt:
 
 - `submenu.py`
 - `metamenu.py`

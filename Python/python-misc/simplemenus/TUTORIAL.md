@@ -270,7 +270,10 @@ Aber Vorsicht, beim Zugriff auf ein Listenelement mittels Index muss ich
 natürlich den ursprünglichen und bei `0` startenden Index benutzen.
 
 Leider ist obiger Code schlecht! Er ist eines der berühmten **Anti-Pattern**,
-die man häufig bei Anfängern oder Umsteigern von anderen Sprachen sieht.
+die man häufig bei Anfängern oder Umsteigern von anderen Sprachen sieht. Durch 
+den Aufruf zweier, in diesem Zusammenhang, unnötiger Funktionen (`range()` und 
+`len()`) wirkt der Code unleserlich, weil man im Schleifenrumpf immer das 
+Objekt mittels Indexzugriffs aus der Struktur *herausholen* muss.
 
 **Benutze diese Art von Code nie!**
     

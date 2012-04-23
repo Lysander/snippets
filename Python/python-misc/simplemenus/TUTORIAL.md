@@ -302,7 +302,8 @@ In [6]: for index, item in enumerate(menu, 1):
 Bingo. So sieht der Code auch viel übersichtlicher aus. Man erkennt anhand der
 Namen im Schleifenkopf sofort, was für Objekte einem im Rumpf zur Verfügung
 stehen. Ich übergebe `enumerate` einfach als ersten Parameter das iterierbare
-Objekt. Als zweiten Parameter kann ich optional noch einen Startindex vorgeben.
+Objekt. Als zweiten Parameter kann ich **optional** noch einen Startindex 
+vorgeben, lasse ich den weg, wird bei null angefangen zu zählen.
 
 So, nun teste ich mal meine neue Errungenschaft, indem ich mein Menü wie zu
 Beginn angedacht mal erweitere und die Optionen zwei und drei tausche...

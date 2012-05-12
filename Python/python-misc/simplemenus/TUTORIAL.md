@@ -213,21 +213,15 @@ menu = [
 Wir haben hier eine simple **Liste** angelegt, die unsere vier Menüeinträge
 beinhaltet. Diese können wir nun ausgeben lassen:
     
-```python
-In [2]: for item in menu:
-   ...:     print(item)
-   ...:     
+```pycon
+>>> for item in menu:
+...     print(item)
+... 
 1  Eintrag hinzufügen
 2  Eintrag löschen
 3  Eintrag suchen
 4  Beenden
 ```
-Ich benutze die Shell [IPython](http://ipython.org/) für meine Snippets. Also
-sei nicht durch die `[2]` verwirrt, das ist lediglich Teil der Ausgabe
-von IPython. Aber man kann damit auch prima Code-Stellen referenzieren. Mein
-Tipp an Dich lautet also: Schau Dir IPython mal an! (Du kannst natürlich mit
-jeder anderen Python-Shell arbeiten)
-
 Ok, also wir können Listen einfach ausgeben. Aber was haben wir jetzt
 dadurch gewonnen? Im Moment noch nicht viel.
 
@@ -244,23 +238,22 @@ mit dem zugehörigen Item ausgeben lassen.
 
 Frisch ans Werk:
 
-```python
-In [4]: menu = [
-    "Eintrag hinzufügen",
-    "Eintrag löschen",
-    "Eintrag suchen",
-    "Beenden"
-]
-
-In [5]: for index in range(len(menu)):
-    print("{}  {}".format(index+1, menu[index]))
-   ...:     
+```pycon
+>>> menu = [
+...     "Eintrag hinzufügen",
+...     "Eintrag löschen",
+...     "Eintrag suchen",
+...     "Beenden"
+... ]
+>>> for index in range(len(menu)):
+...     print("{}  {}".format(index+1, menu[index]))
+... 
 1  Eintrag hinzufügen
 2  Eintrag löschen
 3  Eintrag suchen
 4  Beenden
 ```
-Wunderbar :-) Ich konnte in `[4]` den Index aus den Optionen rauswerfen und
+Wunderbar :-) Ich konnte zunächst den Index aus den Optionen rauswerfen und
 habe diesen durch das Zählen mittels `range` selber erzeugt. Die Anzahl,
 wie weit wir zählen müssen, habe ich mir mittels `len()` geholt. Im 
 Schleifenrumpf habe ich einen String mit zwei Platzhaltern erstellt, die ich 
@@ -277,7 +270,7 @@ Objekt mittels Indexzugriffs aus der Struktur *herausholen* muss.
 
 **Benutze diese Art von Code nie!**
     
-Wie wir in `[2]` gesehen haben, iteriert man in Python immer **direkt** über
+Wie wir davor gesehen haben, iteriert man in Python immer **direkt** über
 die Elemente einer Liste, oder allgemeiner eines `Iterable`. Damit erspart
 man sich den Zugriff auf ein Element über den Index (wie in der 
 `format`-Methode).
@@ -285,15 +278,15 @@ man sich den Zugriff auf ein Element über den Index (wie in der
 Was tut man also, wenn man neben dem eigentlichen Element auch noch einen Index
 benötigt?
 
-Python bietet dazu eine *Built-In* Funktion namens `enumerate` an. Diese 
+Python bietet dazu eine *Built-in* Funktion namens `enumerate` an. Diese 
 erzeugt Tupel bestehend aus einem Index und dem zugehörigen Element.
 
 Genau das, was wir hier brauchen:
     
-```python
-In [6]: for index, item in enumerate(menu, 1):
-    print("{}  {}".format(index, item))
-   ...:     
+```pycon
+>>> for index, item in enumerate(menu, 1):
+...     print("{}  {}".format(index, item))
+... 
 1  Eintrag hinzufügen
 2  Eintrag löschen
 3  Eintrag suchen
@@ -309,18 +302,17 @@ So, nun teste ich mal meine neue Errungenschaft, indem ich mein Menü wie zu
 Beginn angedacht mal erweitere und die Optionen zwei und drei tausche...
 
 ```python
-In [8]: menu = [
-...:    "Eintrag hinzufügen",
-...:    "Eintrag suchen",
-...:    "Eintrag löschen",
-...:    "Telefonbuch speichern",
-...:    "Telefonbuch laden",
-...:    "Beenden"
-...: ]
-
-In [9]: for index, item in enumerate(menu, 1):
-    print("{}  {}".format(index, item))
-   ...:     
+>>> menu = [
+...     "Eintrag hinzufügen",
+...     "Eintrag suchen",
+...     "Eintrag löschen",
+...     "Telefonbuch speichern",
+...     "Telefonbuch laden",
+...     "Beenden"
+... ]
+>>> for index, item in enumerate(menu, 1):
+...     print("{}  {}".format(index, item))
+... 
 1  Eintrag hinzufügen
 2  Eintrag suchen
 3  Eintrag löschen
@@ -378,35 +370,32 @@ eigentlich.
 
 Schauen wir uns das mal an:
     
-```python    
-In [11]: def foo():
-   ....:     print("Bin in foo")
-   ....:     
-
-In [12]: foo()
+```pycon
+>>> def foo():
+...     print("Bin in foo")
+... 
+>>> foo()
 Bin in foo
-
-In [14]: type(foo)
-Out[14]: builtins.function
-
-In [15]: isinstance(foo, object)
-Out[15]: True
+>>> type(foo)
+<class 'function'>
+>>> isinstance(foo, object)
+True
 ```
-Ich schreibe mir in `[11]` eine einfache Funktion, die nichts macht außer
-einen Text zu printen. In `[14]` habe ich mir mittels der `type`-Funktion
+Ich schreibe mir zunächst eine einfache Funktion, die nichts macht außer
+einen Text zu printen. Danach habe ich mir mittels der `type`-Funktion
 einmal den Typen des Objektes ausgeben lassen, welches an den Namen `foo`
 gebunden ist. Offensichtlich ist der Typ vom Typ `function`. Das kann man auch
 in der offiziellen Doku in 
 [Abschnitt 4.11.4](http://docs.python.org/py3k/library/stdtypes.html#functions) 
 nachlesen.
 
-In `[15]` prüfe ich, ob das Objekt hinter `foo` vom (Sub-)Typ `object` ist.
+Als letztes prüfe ich, ob das Objekt hinter `foo` vom (Sub-)Typ `object` ist.
 `object` stellt den obersten Typen in der Typhierarchie dar. Eine Funktion ist
 also auch vom Typ `object`, genauso wie z.B. ein Integer:
 
-```python    
-In [17]: isinstance(69, object)
-Out[17]: True
+```pycon
+>>> isinstance(69, object)
+True
 ```
 
 Also müssten sich solche "Funktions"-Objekte doch auch in einer Liste speichern
@@ -414,24 +403,20 @@ lassen?
 
 Testen wir das doch!
 
-```python 
-In [18]: def bar():
-   ....:     print("Bin in bar")
-   ....:     
-
-In [19]: l = [foo, bar]
-
-In [20]: l
-Out[20]: [<function __main__.foo>, <function __main__.bar>]
-
-In [21]: l[0]
-Out[21]: <function __main__.foo>
-
-In [22]: l[1]
-Out[22]: <function __main__.bar>
+```pycon
+>>> def bar():
+...     print("Bin in bar")
+... 
+>>> l = [foo, bar]
+>>> l
+[<function foo at 0x7ff6e74b0a68>, <function bar at 0x7ff6e74b0e20>]
+>>> l[0]
+<function foo at 0x7ff6e74b0a68>
+>>> l[1]
+<function bar at 0x7ff6e74b0e20>
 ```
-In `[18]` erstelle ich mir zunächst noch eine kleine Funktion `bar`, die analog
-zu `foo` funktioniert. In `[19]` passiert nun die "Magie"... zumindest sind
+Ich erstelle mir zusätzlich zu `foo` eine kleine Funktion `bar`, die analog
+funktioniert. Danach passiert nun die "Magie"... zumindest sind
 Anfänger davon immer verblüfft. Ich habe tatsächlich die Funktionen in einer
 Liste untergebracht! **Achtung**: Ich habe dort nicht `foo()`, sondern nur 
 `foo` geschrieben. Durch die runden Klammern teilen wir Python mit, dass wir
@@ -443,20 +428,20 @@ Kann ich die Funktionen nun auch aufrufen?
 
 Ja, klar doch:
     
-```python 
-In [26]: l[0]()
+```pycon
+>>> l[0]()
 Bin in foo
-
-In [27]: for func in l:
-   ....:     func()
-   ....:     
+>>> for func in l:
+...     func()
+... 
 Bin in foo
 Bin in bar
 ```
-In `[26]` habe ich nun die Klammern `()` hinter meinen Indexzugriff geschrieben.
-Python weiß nun, dass ich das Objekt hinter dem Index *aufrufen* möchte und tut
-das auch. Ich kann auch in einer Schleife über alle Funktionsobjekte in meiner 
-Liste iterieren und jedes einzeln aufrufen, wie in `[27]` zu sehen ist.
+Ich habe nun die Klammern `()` hinter meinen Indexzugriff geschrieben.
+Python weiß daher, dass ich das Objekt hinter dem Index *aufrufen* möchte und 
+tut das auch. Ich kann auch in einer Schleife über alle Funktionsobjekte in 
+meiner Liste iterieren und jedes einzeln aufrufen, was ich anschließend
+demonstriert habe.
 
 Moment. In Kopf der Schleife binde ich bei jedem Durchlauf das aktuelle
 Funktionsobjekt an den Namen `func`... so etwas geht?
@@ -464,10 +449,9 @@ Funktionsobjekt an den Namen `func`... so etwas geht?
 Ja, denn ich kann jedes Objekt in Python an einen Namen binden, natürlich auch
 Funktionsobjekte. Schauen wir uns das mal an:
 
-```python 
-n [28]: a = foo
-
-In [29]: a()
+```pycon
+>>> a = foo
+>>> a()
 Bin in foo
 ```
 Ich kann also meine Funktion `foo` an einen anderen Namen binden!
@@ -478,22 +462,29 @@ Jetzt ist auch klar, was der Großmeister oben damit meinte, als er sagte
 
 Damit meinte er genau solche Zuweisungen.
 
+Wenn Du das bisher verstanden hast, kannst Du den Rest des Abschnitts auch
+überspringen; da ich gerade Lust darauf habe, erkläre ich noch einiges zu
+Objekten - das musst Du aber nicht mehr für dieses Tutorial wissen!
+
+Also weiter im Text...
+
 Ich kann so etwas machen:
     
-```python     
-In [33]: true = True
-
-In [34]: false = False
-
-In [35]: nil = None
+```pycon
+>>> true = True
+>>> false = False
+>>> nil = None
 ```
 Auch wenn das wenig sinnvoll ist ;-)
 
 Aber das kann ich nicht machen:
 
-```python 
-In [36]: p = +
-SyntaxError: invalid syntax (<ipython-input-36-c82c7ffef911>, line 1)
+```pycon
+>>> p = +
+  File "<stdin>", line 1
+    p = +
+        ^
+SyntaxError: invalid syntax
 ```
 Ein Glück gibt es das Modul `operator`, indem eine Reihe von 
 *Wrapperfunktionen* definiert sind, mit deren Hilfe man Ausdrücke anstatt mit 
@@ -504,12 +495,10 @@ Für uns ist das hier nicht weiter wichtig.
 Aber es geht noch mehr:
 
 ```python 
-In [30]: a is foo
-Out[30]: True
-
-In [31]: del foo
-
-In [32]: a()
+>>> a is foo
+True
+>>> del foo
+>>> a()
 Bin in foo
 ```
 Ich kann mittels `is` Operator prüfen, ob zwei Objekte **identisch** sind. Da
@@ -524,13 +513,11 @@ die letzte Referenz auf das Objekt lösche, also `a`, dann wird Pythons
 Aber halt. Das stimmt in diesem Falle noch nicht, da das Objekt ja inzwischen
 auch in meiner Liste `l` gebunden ist.
 
-```python 
-In [37]: del a
-
-In [38]: l
-Out[38]: [<function __main__.foo>, <function __main__.bar>]
-
-In [39]: l[0]()
+```pycon
+>>> del a
+>>> l
+[<function foo at 0x7ff6e74b0a68>, <function bar at 0x7ff6e74b0e20>]
+>>> l[0]()
 Bin in foo
 ```
 Ok, wir wollen ja die Funktion auch nicht löschen ;-) Aber nun wissen wir
@@ -549,24 +536,24 @@ speichern.
 
 Wie wäre es damit:
 
-```python 
-In [47]: def add_entry(): print("Eintrag wird hinzugefügt")
-
-In [48]: def search_entry(): print("Eintrag wird gesucht")
-
-In [49]: def remove_entry(): print("Eintrag wird gelöscht")
-
-In [50]: def quit(): print("Beende das Programm")
-
-In [51]: menufuncs = [
-   ....: add_entry,
-   ....: search_entry,
-   ....: remove_entry,
-   ....: quit
-   ....: ]
+```pycon
+>>> def add_entry(): print("Eintrag wird hinzugefügt")
+... 
+>>> def search_entry(): print("Eintrag wird gesucht")
+... 
+>>> def remove_entry(): print("Eintrag wird gelöscht")
+... 
+>>> def quit(): print("Beende das Programm")
+... 
+>>> menufuncs = [
+...     add_entry,
+...     search_entry,
+...     remove_entry,
+...     quit
+... ]
 ```
 
-Die Einträge ausgeben lassen können wir ja bereits (vgl. `[6]`). Aber wie
+Die Einträge ausgeben lassen können wir ja bereits. Aber wie
 können wir nun unsere Funktionen passend zur Benutzerauswahl aufrufen?
 
 Ganz einfach: Der Benutzer wählt ja bereits einen *Index* aus; genau diesen
@@ -575,19 +562,16 @@ Funktionsliste `menufuncs` zuzugreifen!
 
 Simulieren wir das einmal:
     
-```python 
-In [55]: choice = 3
-
-In [57]: menufuncs[3-1]
-Out[57]: <function __main__.remove_entry>
-
-In [56]: menufuncs[3-1]()
+```pycon
+>>> menufuncs[3-1]
+<function remove_entry at 0x7ff6e74b41e8>
+>>> menufuncs[3-1]()
 Eintrag wird gelöscht
 ```
 Nehmen wir an, der Benutzer wählt Menüpunkt Nummer drei aus, dann wollen wir 
 auch die dritte Funktion aufrufen, die unter dem Index **zwei** zu finden ist
-(weil bei Python Indexe immer bei `0` anfangen!). Also müssen wir von `choice`
-immer noch `1` abziehen.
+(weil bei Python Indexe immer bei `0` anfangen!). Also müssen wir von der
+Eingabe des Benutzers immer noch `1` abziehen.
 
 Aber entscheidend ist doch, dass wir einfach basierend auf der reinen 
 Benutzereingabe und einem trivialen Indexzugriff die richtige Funktion
@@ -595,11 +579,10 @@ aufrufen können! Damit können wir uns die ganzen `if...elif`-Kaskaden sparen.
 
 Überlegen wir uns mal, wie wir das umsetzen können...
 
-```python 
-In [59]: choice = int(input("Ihre Wahl: "))
+```pycon
+>>> choice = int(input("Ihre Wahl: "))
 Ihre Wahl: 3
-
-In [60]: menufuncs[choice-1]()
+>>> menufuncs[choice-1]()
 Eintrag wird gelöscht
 ```
 Eigentlich exakt so, wie angedacht. Wir müssen nur die passende Funktion
@@ -635,8 +618,8 @@ Nutzereingabe ab, das sieht dann beim Indexzugriff übersichtlicher aus und
 wir brauchen die "verfälschte" Eingabe ja auch nicht weiter.
 Testen wir das einmal:
 
-```python 
-In [64]: handle_menu(menutexts, menufuncs)
+```pycon
+>>> handle_menu(menutexts, menufuncs)
 1  Eintrag hinzufügen
 2  Eintrag suchen
 3  Eintrag löschen
@@ -680,8 +663,8 @@ menufuncs = [
 ```
 Nicht wirklich etwas neues... also testen wir es mal:
 
-```python 
-In [71]: handle_menu(menutexts, menufuncs)
+```pycon
+>>> handle_menu(menutexts, menufuncs)
 1  Eintrag hinzufügen
 2  Eintrag löschen
 3  Eintrag suchen
@@ -720,14 +703,12 @@ Für den Zugriff können wir nach wie vor über den Index gehen, erhalten
 darunter aber wiederum eine Liste, die aus zwei Elementen besteht. Index `0`
 beheimatet den Menütext, Index `1` die aufzurufende Funktion:
 
-```python 
-In [73]: menu[1]
-Out[73]: ['Eintrag suchen', <function __main__.search_entry>]
-
-In [74]: menu[1][0]
-Out[74]: 'Eintrag suchen'
-
-In [75]: menu[1][1]()
+```pycon
+>>> menu[1]
+['Eintrag suchen', <function search_entry at 0x7ff6e74b40d8>]
+>>> menu[1][0]
+'Eintrag suchen'
+>>> menu[1][1]()
 Eintrag wird gesucht
 ```
 Wunderbar einfach :-)
@@ -753,8 +734,8 @@ That's it :-)
 
 Zeit zu testen:
 
-```python 
-In [80]: handle_menu(menu)
+```pycon
+>>> handle_menu(menu)
 1  Eintrag hinzufügen
 2  Eintrag suchen
 3  Eintrag löschen
@@ -809,33 +790,12 @@ Menüdefinition verwendet. An dieser Stelle kann man noch optimieren. Da wir die
 Paare aus Text und Funktion immer zusammmen erstellen und eigentlich nicht
 mehr ändern wollen, können wir dafür auch den Datentyp `tuple` verwenden.
 Dieser verhällt sich exakt so wie eine Liste, außer, dass man Tupel-Objekte
-nach dem Anlegen nicht mehr ändern kann. Hier mal eine kleine Übersicht:
+nach dem Anlegen nicht mehr ändern kann.
 
-```python 
-In [2]: l = list()
-
-In [3]: l.
-l.append   l.extend   l.insert   l.remove   l.sort     
-l.count    l.index    l.pop      l.reverse  
-
-In [3]: t = tuple()
-
-In [4]: t.
-t.count  t.index  
-```
-Ich erkenne, dass ein Tupel wie eine stark abgespeckte Liste funktioniert. Es
-fehlen aber alle Methoden, die etwas in dem Objekt verändern. Schau Dir mal die
-Methoden genau an... es bleiben wirklich nur die übrig, die nichts verändern.
 Den Indexzugriff mittels `obj[x]` bieten aber beide Strukturen (Verwechsle das 
 nicht mit der `index`-Methode! Diese sucht den Index zu einem gegebenen Objekt
 heraus, also z.B. an welcher Stelle ein bestimmter String oder ein Integerwert
 in der Struktur steht)
-
-Die hübsche Übersicht bekomme ich übrigens dank IPython. In `[3]` drücke ich 
-einfach nach dem `l.` die Tabulator-Taste und IPython schlägt mir mögliche
-Methoden vor, die ich nun auf dem Objekt, welches an `l` gebunden ist,
-aufrufen kann. Eine tolle Möglichkeit, sich einen kurzen Überblick zu 
-verschaffen. Das nur als weitere kleine Werbung für IPython ;-)
 
 Wir können unseren Code bei der Definition einer Menüstruktur einfach auf Tupel 
 umstellen, ohne dass wir an unserer `handle_menu`-Funktion etwas ändern müssen.
@@ -843,31 +803,22 @@ umstellen, ohne dass wir an unserer `handle_menu`-Funktion etwas ändern müssen
 Hier mal ein kleines Beispiel:
 
 ```python 
-In [10]: t = 1, 2, 3
-
-In [11]: t.append(4)
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-/home/nelson/src/snippets/Python/python-misc/simplemenus/<ipython-input-11-e8bd1632f9dd> in <module>()
-----> 1 t.append(4)
-
+>>> t = 1, 2, 3
+>>> t.append(4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
 AttributeError: 'tuple' object has no attribute 'append'
-
-In [12]: t = ("Hallo", "Welt")
-
-In [13]: for item in t:
-   ....:     print(item)
-   ....:     
+>>> t = ("Hallo", "Welt")
+>>> for item in t:
+...     print(item)
+... 
 Hallo
 Welt
-
-In [14]: t[1]
-Out[14]: 'Welt'
 ```
 Man erkennt Tupel an den runden Klammern, die man aber auch bei einer flachen
-Definition weglassen kann (`[10]`). In `[11]` teste ich mal an, ob ich nicht
+Definition weglassen kann. Danach teste ich mal an, ob ich nicht
 doch ein Element hinzufügen kann. Wie man sieht, geht das natürlich nicht; die
-entsprechende Methode fehlt - wie wir ja auch schon oben gesehen haben.
+entsprechende Methode fehlt - wie wir ja auch schon oben gehört haben.
 Damit ist sichergestellt, dass nachträglich nichts an den Definitionen 
 geändert werden kann - egal, ob das nun unabsichtlich oder absichtlich 
 passieren soll. Wenn Du Dir ein Szenario vorstellen kannst, bei dem Änderungen
@@ -887,23 +838,20 @@ prüfen, ob die Eingabe des Benutzers in den Schranken zwischen `0`
 einschließlich und der Anzahl an Menüitems liegt.
 
 Du kennst das sicherlich aus der Mathematik. Dort schreibt man auch häufig
-Sachen wie `x >= 0 /\ x < 10` wenn `x` Werte aus der Menge `{0, 1, 2, ..., 9}`
+Sachen wie `x ≥ 0 ∧ x < 10` wenn `x` Werte aus der Menge `{0, 1, 2, ..., 9}`
 annehmen darf. Das kommt z.B. bei der Formulierung eines Definitionsbereichs
 oder eines Wertebereichs bei Kurvendiskussionen vor. Ich kann das ganze auch
-noch in einen Ausdruck zusammenziehen, der dann so aussähe: `0 <= x < 10`.
+noch in einen Ausdruck zusammenziehen, der dann so aussähe: `0 ≤ x < 10`.
 
 In Python sieht das exakt genauso aus :-)
 
 ```python 
-In [49]: x = 4
-
-In [50]: 0 <= x < 10
-Out[50]: True
-
-In [51]: x = 10
-
-In [52]: 0 <= x < 10
-Out[52]: False
+>>> x = 4
+>>> 0 <= x < 10
+True
+>>> x = 10
+>>> 0 <= x < 10
+False
 ```
 Genau das ist unsere Bedingung, nur dass wir keine feste obere Schranke wie die
 `10` haben, sondern hier die Anzahl der Menüeinträge benutzen müssen. Die 
@@ -943,6 +891,24 @@ Zum Abschluss packe ich noch einmal alles zusammen, so dass wir einen hübschen
 Ansatz!
 
 ```python 
+def add_entry(): 
+    print("Eintrag wird hinzugefügt")
+
+def search_entry(): 
+    print("Eintrag wird gesucht")
+
+def remove_entry(): 
+    print("Eintrag wird gelöscht")
+
+def quit(): 
+    print("Beende das Programm")
+
+def load(): 
+    print("Datensatz wird geladen")
+
+def save(): 
+    print("Datensatz wird gespeichert")
+
 def handle_menu(menu):
     while True:
         for index, item in enumerate(menu, 1):

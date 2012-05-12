@@ -8,7 +8,7 @@ auch wenn Du Python 2.7 verwendest, solltest Du das meiste ohne größere
 Änderungen nachvollziehen können. Benutze `raw_input` anstatt `input` und Du
 musst `print` anpassen. Vermutlich sind das schon die größten Änderungen.
 
-(Hier)[http://docs.python.org/py3k/whatsnew/index.html] kannst Du alle
+[Hier](http://docs.python.org/py3k/whatsnew/index.html) kannst Du alle
 Änderungen von 3.x gegenüber Python2 nachlesen.
 
 Viele Anfänger stehen vor dem Problem, zur Steuerung ihrer typischen kleinen

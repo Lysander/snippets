@@ -301,7 +301,7 @@ vorgeben, lasse ich den weg, wird bei null angefangen zu zählen.
 So, nun teste ich mal meine neue Errungenschaft, indem ich mein Menü wie zu
 Beginn angedacht mal erweitere und die Optionen zwei und drei tausche...
 
-```python
+```pycon
 >>> menu = [
 ...     "Eintrag hinzufügen",
 ...     "Eintrag suchen",

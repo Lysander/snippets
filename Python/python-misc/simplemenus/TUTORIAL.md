@@ -3,9 +3,13 @@ Tutorial für das Erstellen von einfachen Textmenüs
 ==================================================
 
 In diesem kleinen Tutorial möchte ich die Entwicklung eines Menüsystems für
-einfache CLI Programme in Python beschreiben. Ich verwende Python 3.2. Aber
+einfache CLI Programme in Python beschreiben. Ich verwende **Python 3.2**. Aber
 auch wenn Du Python 2.7 verwendest, solltest Du das meiste ohne größere
-Änderungen nachvollziehen können.
+Änderungen nachvollziehen können. Benutze `raw_input` anstatt `input` und Du
+musst `print` anpassen. Vermutlich sind das schon die größten Änderungen.
+
+(Hier)[http://docs.python.org/py3k/whatsnew/index.html] kannst Du alle
+Änderungen von 3.x gegenüber Python2 nachlesen.
 
 Viele Anfänger stehen vor dem Problem, zur Steuerung ihrer typischen kleinen
 einsteigerfreundlichen Tools - wie Adressverwaltungen, Telefonbücher, TODO-

@@ -806,7 +806,7 @@ umstellen, ohne dass wir an unserer `handle_menu`-Funktion etwas ändern müssen
 
 Hier mal ein kleines Beispiel:
 
-```python 
+```pycon
 >>> t = 1, 2, 3
 >>> t.append(4)
 Traceback (most recent call last):
@@ -849,7 +849,7 @@ noch in einen Ausdruck zusammenziehen, der dann so aussähe: `0 ≤ x < 10`.
 
 In Python sieht das exakt genauso aus :-)
 
-```python 
+```pycon
 >>> x = 4
 >>> 0 <= x < 10
 True

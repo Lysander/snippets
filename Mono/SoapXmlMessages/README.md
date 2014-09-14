@@ -16,7 +16,7 @@ support the developer in implementing SOAP-webservices and clients in C#, but al
 every task you wanna do besides the straight calling of a service is ending up 
 in implementing thousands of interfaces.
 
-Of course it is nice, to follow good patterns and practises (espsecially in 
+Of course it is nice, to follow good patterns and practises (especially in 
 static typed languages with a simple object model and single dispatching), 
 as it makes a framework and the workflows made with it customizeable. 
 
@@ -30,7 +30,7 @@ The "problem"
 -------------
 
 If you use a SOAP webservice, you might be interested in knowing, what XML data
-is really generated and sent by your application. To be more precise by the
+is really generated and sent by your application, to be more precise by the
 framework, that one uses to deal with SOAP services. 
 
 (Please ignore all these awful tutorials on the net, where people show how 
@@ -79,7 +79,8 @@ Sorry, that would be to easy for the world of SOAP!
 As the whole internal process - that is happily a *black box* for the user - is 
 surely complex and the developers wanted to keep it as generic and flexible 
 as possible, they have provided some hooks within the object model, as one might know by 
-the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern).
+the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern),
+to enable the user to inject custom actions and behaviors into the execution process.
 
 **Remark**: This is not an evil thing at all!
 
@@ -118,7 +119,7 @@ the request and one that is accessed just *after* getting the response.
 
 Think of this as the place to provide your own kind of 
 [strategy](http://en.wikipedia.org/wiki/Strategy_pattern), that the 
-process should handle at some point during his execution.
+process should handle at some point during its execution.
 
 So the implementation of that interface will be finally our playground 
 to get the "goddamn" XML of the SOAP messages:

@@ -6,13 +6,13 @@ Accessing the generated XML of SOAP requests and responses in .NET made "simple"
 ------------------------------------------------------------
 
 SOAP dropped its [acronym](http://en.wikipedia.org/wiki/SOAP#History) long time 
-ago - also I had always the impression, that SOAP is a complex beast like C++, 
+ago - although I had always the impression, that SOAP is a complex beast like C++, 
 now it is clearer than ever to me, why that was a good and consequent move!
 
 It's quite **simple**: SOAP is not simple, instead it is dauting and cumbersome!
 
 Of course good tooling can, should, even better must and - in fact - does 
-support the developer in implementing SOAP-webservices and clients, but almost 
+support the developer in implementing SOAP-webservices and clients in C#, but almost 
 every task you wanna do besides the straight calling of a service is ending up 
 in implementing thousands of interfaces.
 
@@ -31,7 +31,11 @@ The "problem"
 
 If you use a SOAP webservice, you might be interested in knowing, what XML data
 is really generated and sent by your application. To be more precise by the
-framework, that one uses to deal with SOAP services.
+framework, that one uses to deal with SOAP services. 
+
+(Please ignore all these awful tutorials on the net, where people show how 
+to manually craft the XML requests and responses! Use a framework that handles 
+that for you!)
 
 Perhaps you want to make sure, that you send and receive the data you expected
 or it is just to document which actions had taken place.
@@ -48,7 +52,7 @@ under Linux - you have furthermore a tool integrated, that automatically
 generates the needed stubs from a given WSDL file.
 
 That makes calling an existing webservice really easy (I chose the famous
-webservice by Thomas Beyer for searching informations about german bank data
+webservice by Thomas Bayer for searching informations about german bank data
 as my [example webservice](http://predic8.de/soap/blz-webservice.htm).):
 
 ```cs
@@ -73,8 +77,8 @@ a super intelligent `ToString`-Method?
 Sorry, that would be to easy for the world of SOAP!
 
 As the whole internal process - that is happily a *black box* for the user - is 
-surely complex and the developers wanted to keep it as generic as possible, they
-have provided some hooks within the object model, as one might know by 
+surely complex and the developers wanted to keep it as generic and flexible 
+as possible, they have provided some hooks within the object model, as one might know by 
 the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern).
 
 **Remark**: This is not an evil thing at all!
@@ -114,7 +118,7 @@ the request and one that is accessed just *after* getting the response.
 
 Think of this as the place to provide your own kind of 
 [strategy](http://en.wikipedia.org/wiki/Strategy_pattern), that the 
-process should handle at some time during his work.
+process should handle at some point during his execution.
 
 So the implementation of that interface will be finally our playground 
 to get the "goddamn" XML of the SOAP messages:
@@ -197,18 +201,19 @@ framework... that would save so much life-time that you can spend with much
 nicer things than to explore the possibilities of dealing with SOAP
 problems... ok, almost everything is more fun than SOAP 😉 
 
-(Perhaps that is the reason, why the .NET developers did not spend to much 
-time with their SOAP APIs? 😈 just kidding... )
+(Perhaps that is the reason, why the .NET developers did not spend too much 
+time to polish their SOAP framework? 😈 just kidding... )
 
 
 P.S.
 ----
 
-If you like my thoughts and solution, tell it to the world and Microsoft, if
+If you like my thoughts and solution, tell it to the world and Microsoft; if
 you dislike it, tell it to **me**!
 
-Hey guys @Microsoft: I allow you to grab my solution and put it into the 
-framework! Please help people wasting less time in the future! 😛
+Hey guys @Microsoft: Feel free to grab my solution and put it into the 
+framework (see the license-file with the BSD license)! 
+Please help people wasting less time in the future! 😛
 
 
 P.P.S.
@@ -218,7 +223,7 @@ I excuse for the unconvenient formating of the source code - MonoDevelop seems
 to handle that differently than Visual Studio does. In my opinion it is
 quite ugly, because it looks like a mixture of Java and C# as we know it.
 Spaces before methods are just misleading as they remind one on collection
-initialisers like one knows from other languages like Python or Clojure.
+literals that one might know from other languages like Python or Clojure.
 
 Perhaps there are options in MonoDevelop to correct these issues, but to be
 honest I have no motivation to get into it further more. C# is good for work,

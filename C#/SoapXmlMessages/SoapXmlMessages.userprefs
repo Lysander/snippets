@@ -1,0 +1,13 @@
+﻿<Properties>
+  <AuthorInfo Name="Christian Hausknecht" Email="christian.hausknecht@gmx.de" Copyright="Christian Hausknecht" Company="" Trademark="" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SoapXmlMessages/Program.cs">
+    <Files>
+      <File FileName="SoapXmlMessages/Program.cs" Line="13" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

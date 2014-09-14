@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://thomas-bayer.com/blz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:tns="http://thomas-bayer.com/blz/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://thomas-bayer.com/blz/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>BLZService</wsdl:documentation>
+  <types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://thomas-bayer.com/blz/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getBank" type="tns:getBankType" />
+      <xs:element name="getBankResponse" type="tns:getBankResponseType" />
+      <xs:complexType name="getBankType">
+        <xs:sequence>
+          <xs:element name="blz" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBankResponseType">
+        <xs:sequence>
+          <xs:element name="details" type="tns:detailsType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="detailsType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bezeichnung" type="xs:string" />
+          <xs:element minOccurs="0" name="bic" type="xs:string" />
+          <xs:element minOccurs="0" name="ort" type="xs:string" />
+          <xs:element minOccurs="0" name="plz" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="getBank">
+    <part name="parameters" element="tns:getBank" />
+  </message>
+  <message name="getBankResponse">
+    <part name="parameters" element="tns:getBankResponse" />
+  </message>
+  <portType name="BLZServicePortType">
+    <operation name="getBank">
+      <input message="tns:getBank" />
+      <output wsaw:Action="http://thomas-bayer.com/blz/BLZService/getBankResponse" message="tns:getBankResponse" />
+    </operation>
+  </portType>
+  <binding name="BLZServiceSOAP11Binding" type="tns:BLZServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getBank">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="BLZServiceSOAP12Binding" type="tns:BLZServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getBank">
+      <soap12:operation soapAction="" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="BLZServiceHttpBinding" type="tns:BLZServicePortType">
+    <http:binding verb="POST" />
+    <operation name="getBank">
+      <http:operation location="BLZService/getBank" />
+      <input>
+        <mime:content part="getBank" type="text/xml" />
+      </input>
+      <output>
+        <mime:content part="getBank" type="text/xml" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BLZService">
+    <port name="BLZServiceSOAP11port_http" binding="tns:BLZServiceSOAP11Binding">
+      <soap:address location="http://www.thomas-bayer.com/axis2/services/BLZService" />
+    </port>
+    <port name="BLZServiceSOAP12port_http" binding="tns:BLZServiceSOAP12Binding">
+      <soap12:address location="http://www.thomas-bayer.com/axis2/services/BLZService" />
+    </port>
+    <port name="BLZServiceHttpport" binding="tns:BLZServiceHttpBinding">
+      <http:address location="http://www.thomas-bayer.com/axis2/services/BLZService" />
+    </port>
+  </service>
+</definitions>

@@ -82,7 +82,7 @@ namespace SoapXmlMessages
 		{
 			// here we add one "strategy" for handling SOAP messages
 			// MS designed this using the "Template Pattern", so we are able to add a
-			// specifiv behavior that will be called during the execution of webservice.
+            // specific behavior that will be called during the execution of webservice.
 			behavior.MessageInspectors.Add (messageInspector);
 		}
 

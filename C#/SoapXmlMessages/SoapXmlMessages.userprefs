@@ -3,7 +3,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="SoapXmlMessages/Program.cs">
     <Files>
-      <File FileName="SoapXmlMessages/Program.cs" Line="13" Column="1" />
+      <File FileName="SoapXmlMessages/Program.cs" Line="39" Column="4" />
+      <File FileName="SoapXmlMessages/XmlMessageInspector.cs" Line="69" Column="3" />
+      <File FileName="SoapXmlMessages/Service References/www.thomas_bayer.com/Reference.cs" Line="36" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

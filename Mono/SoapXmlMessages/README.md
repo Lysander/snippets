@@ -2,7 +2,7 @@
 Accessing the generated XML of SOAP requests and responses in .NET made "simple"
 ================================================================================
 
-(Or: a ballad of chasing lame SOAP XML access in three acts)
+(Or: a ballad of chasing lame SOAP XML access in four acts)
 ------------------------------------------------------------
 
 SOAP dropped its [acronym](http://en.wikipedia.org/wiki/SOAP#History) long time 
@@ -36,7 +36,7 @@ framework, that one uses to deal with SOAP services.
 Perhaps you want to make sure, that you send and receive the data you expected
 or it is just to document which actions had taken place.
 
-So this really sounds simple, doesn't it?
+So this really sounds simple and rational, doesn't it?
 
 
 The "solution"
@@ -64,13 +64,15 @@ as my [example webservice](http://predic8.de/soap/blz-webservice.htm).):
     // now you can process the properties in the result object
 ```
 
-Ok, looks simple and straight forwarded. But how can we get the request message?
+Ok, looks simple and straight forwarded. 
+
+But how can we get the request message?
 Isn't there something like a `client.RequestMessage`-property? Or perhaps
 a super intelligent `ToString`-Method?
 
 Sorry, that would be to easy for the world of SOAP!
 
-As the whole internal process, that is a happily *black box* for the user, is 
+As the whole internal process - that is happily a *black box* for the user - is 
 surely complex and the developers wanted to keep it as generic as possible, they
 have provided some hooks within the object model, as one might know by 
 the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern).
@@ -143,7 +145,7 @@ execution of a SOAP operation.
 ```
 
 And - tadaaaaaa - we have allready reached the end of our *quest*. Just fire up
-the request and see the beauty of the prefectly shaped SOAP XML strings... :-D
+the request and see the beauty of the prefectly shaped SOAP XML strings... 😍
 
 
 The "rant"
@@ -154,7 +156,7 @@ even not very complex and fit nicely into the
 [interface segregation principle](http://en.wikipedia.org/wiki/Interface_segregation_principle).
 So everything is fine, the world of SOAP pacified and I am just happy?
 
-Of course **NOT**!
+Of course **NOT**! 😠
 
 I have no problem in general with these design decisions to expose a clear and 
 distinguished interface for hooking into a workflow and probably manipulate it,
@@ -168,15 +170,19 @@ later on? Just search for it on google and you will **recognize** that
 this **is** a common problem!
 
 The usage of patterns and ways to open up a workflow process for extensions is
-important and a good thing. Not to provide **default** solutions to made
-common tasks easy, is a **bad** thing!
+important and a good thing. Not to provide **default** solutions to make
+common tasks easy and simple, is a **bad** thing!
+
+
+The end
+-------
 
 So, now I calm down and say a few concluding and constructive-minded thoughts 
 about my solution.
 
 As C# provides a built-in support for the observer pattern, I decided to use
 events to provide a loose coupling between the webservice and the backend logic.
-You just have to pass a arbitrary listener into the creation process of a 
+You just have to pass an arbitrary listener into the creation process of a 
 service client, which you can easily put into some kind of factory or builder.
 
 In my example application you will find the construction process in the
@@ -185,10 +191,10 @@ In my example application you will find the construction process in the
 Imho it is not a big deal to provide something similar within the .NET 
 framework... that would save so much life-time that you can spend with much 
 nicer things than to explore the possibilities of dealing with SOAP
-problems... ok, almost everything is more fun than SOAP ;-) 
+problems... ok, almost everything is more fun than SOAP 😉 
 
 (Perhaps that is the reason, why the .NET developers did not spend to much 
-time with their SOAP APIs? :-D just kidding... )
+time with their SOAP APIs? 😈 just kidding... )
 
 
 P.S.
@@ -198,4 +204,18 @@ If you like my thoughts and solution, tell it to the world and Microsoft, if
 you dislike it, tell it to **me**!
 
 Hey guys @Microsoft: I allow you to grab my solution and put it into the 
-framework! Please help people wasting less time in the future! :-P
+framework! Please help people wasting less time in the future! 😛
+
+
+P.P.S.
+------
+
+I xecuse for the unconvenient formating of the source code - MonoDevelop seems
+to handle that differently than Visual Studio does. In my opinion it is
+quite ugly, because it looks like a mixture of Java and C# as we know it.
+Spaces before methods are just misleading as they remind one on collection
+initialisers like one knows from other languages like Python or Clojure.
+
+Perhaps there are options in MonoDevelop to correct these issues, but to be
+honest I have no motivation to get into it further more. C# is good for work,
+but not enough fun for my sparetime 😃

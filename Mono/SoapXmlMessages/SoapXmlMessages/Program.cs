@@ -43,7 +43,7 @@ namespace SoapXmlMessages
 
         public void OnSoapXmlActionOccured (object sender, StringEventArgs e)
         {
-            // So something with the Request / Response-Messages, logging for example
+            // Do something with the Request / Response-Messages, logging for example
             Console.WriteLine (e.Xml);
         }
     }
@@ -53,7 +53,7 @@ namespace SoapXmlMessages
         public BLZServicePortTypeClient CreateServiceFor (BankDataAccessor accessor)
         {
             var messageInspector = new XmlMessageInspector ();
-            // bind some simple handling method to just print out the messages.
+            // bind some simple handling methods to connect our crafted events
             messageInspector.SoapXmlRequestOccured += accessor.OnSoapXmlActionOccured;
             messageInspector.SoapXmlResponseOccured += accessor.OnSoapXmlActionOccured;
 
@@ -67,6 +67,7 @@ namespace SoapXmlMessages
             // the inspector, that catches the XML Messages and raises the defined events
             client.Endpoint.Behaviors.Add (messageBehavior);
 
+            // and now we have the client ready for "action" :-)
             return client;
         }
     }

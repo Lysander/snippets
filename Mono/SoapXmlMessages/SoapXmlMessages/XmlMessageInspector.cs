@@ -35,7 +35,7 @@ namespace SoapXmlMessages
         public void AfterReceiveReply (ref System.ServiceModel.Channels.Message message, 
                                     object correlationState)
         {
-            // here we can finally access the XML by the overloaded ``.toString``-method
+            // here we can finally access the XML by the overloaded ``.ToString``-method
             if (SoapXmlResponseOccured != null) {
                 SoapXmlResponseOccured (this, new StringEventArgs (message.ToString ()));
             }
@@ -44,7 +44,7 @@ namespace SoapXmlMessages
         public object BeforeSendRequest (ref System.ServiceModel.Channels.Message message, 
                                         System.ServiceModel.IClientChannel channel)
         {
-            // here we can finally access the XML by the overloaded ``.toString``-method
+            // here we can finally access the XML by the overloaded ``.ToString``-method
             if (SoapXmlRequestOccured != null) {
                 SoapXmlRequestOccured (this, new StringEventArgs (message.ToString ()));
             }

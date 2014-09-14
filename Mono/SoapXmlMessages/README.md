@@ -112,8 +112,12 @@ What does an inspector look like? Well that is quite a simple interface, with
 just two methods to implement: One that is accessed just *before* sending
 the request and one that is accessed just *after* getting the response.
 
-So that interface will be finally our playground to get the "goddamn" XML of
-the SOAP messages:
+Think of this as the place to provide your own kind of 
+[strategy](http://en.wikipedia.org/wiki/Strategy_pattern), that the 
+process should handle at some time during his work.
+
+So the implementation of that interface will be finally our playground 
+to get the "goddamn" XML of the SOAP messages:
 
 ```cs
     public class XmlMessageInspector : IClientMessageInspector
@@ -210,7 +214,7 @@ framework! Please help people wasting less time in the future! 😛
 P.P.S.
 ------
 
-I xecuse for the unconvenient formating of the source code - MonoDevelop seems
+I excuse for the unconvenient formating of the source code - MonoDevelop seems
 to handle that differently than Visual Studio does. In my opinion it is
 quite ugly, because it looks like a mixture of Java and C# as we know it.
 Spaces before methods are just misleading as they remind one on collection

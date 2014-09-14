@@ -1,10 +1,10 @@
 ﻿<Properties>
   <AuthorInfo Name="Christian Hausknecht" Email="christian.hausknecht@gmx.de" Copyright="Christian Hausknecht" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SoapXmlMessages/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SoapXmlMessages/XmlMessageInspector.cs">
     <Files>
-      <File FileName="SoapXmlMessages/Program.cs" Line="39" Column="4" />
-      <File FileName="SoapXmlMessages/XmlMessageInspector.cs" Line="69" Column="3" />
+      <File FileName="SoapXmlMessages/Program.cs" Line="22" Column="36" />
+      <File FileName="SoapXmlMessages/XmlMessageInspector.cs" Line="78" Column="56" />
       <File FileName="SoapXmlMessages/Service References/www.thomas_bayer.com/Reference.cs" Line="36" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>

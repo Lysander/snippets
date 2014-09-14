@@ -2,7 +2,8 @@
 Accessing the generated XML of SOAP requests and responses in .NET made "simple"
 ================================================================================
 
-(or: a quest for glory in three acts)
+(Or: a ballad of chasing lame SOAP XML access in three acts)
+------------------------------------------------------------
 
 SOAP dropped its [acronym](http://en.wikipedia.org/wiki/SOAP#History) long time 
 ago - also I had always the impression, that SOAP is a complex beast like C++, 
@@ -13,16 +14,16 @@ It's quite **simple**: SOAP is not simple, instead it is dauting and cumbersome!
 Of course good tooling can, should, even better must and - in fact - does 
 support the developer in implementing SOAP-webservices and clients, but almost 
 every task you wanna do besides the straight calling of a service is ending up 
-in implementing thousends of interfaces.
+in implementing thousands of interfaces.
 
-Of course it is nice, to follow good patterns and practises (in static typed
-languages with a simple object model and single dispatching), as it makes a 
-framework and the workflows made with it customizeable. 
+Of course it is nice, to follow good patterns and practises (espsecially in 
+static typed languages with a simple object model and single dispatching), 
+as it makes a framework and the workflows made with it customizeable. 
 
 But: For common tasks one should provide a built-in standard solution - 
 at least in my humble opinion!
 
-Well, Microsoft seems to think *differently*...
+Well, Microsoft seems to think *differently*... as we will see.
 
 
 The "problem"
@@ -35,7 +36,7 @@ framework, that one uses to deal with SOAP services.
 Perhaps you want to make sure, that you send and receive the data you expected
 or it is just to document which actions had taken place.
 
-So this really sounds simple, doen't it?
+So this really sounds simple, doesn't it?
 
 
 The "solution"
@@ -47,10 +48,10 @@ under Linux - you have furthermore a tool integrated, that automatically
 generates the needed stubs from a given WSDL file.
 
 That makes calling an existing webservice really easy (I chose the famous
-webservice by Thomas Beyer for seraching informations about german bank data
+webservice by Thomas Beyer for searching informations about german bank data
 as my [example webservice](http://predic8.de/soap/blz-webservice.htm).):
 
-```cshap
+```cs
     // create a stub-object from the generated classes:
     var client = new BLZServicePortTypeClient (
         new BasicHttpBinding (), 
@@ -63,16 +64,16 @@ as my [example webservice](http://predic8.de/soap/blz-webservice.htm).):
     // now you can process the properties in the result object
 ```
 
-Ok, looks simple and straight forward. But how can we get the request message?
+Ok, looks simple and straight forwarded. But how can we get the request message?
 Isn't there something like a `client.RequestMessage`-property? Or perhaps
 a super intelligent `ToString`-Method?
 
 Sorry, that would be to easy for the world of SOAP!
 
-As the whole internal process, that is a *black box* for the user, is surely
-complex and the developers wanted to keep it as generic as possible, they
-have provided some hooks within the object model, as one might know it by 
-the [template pattern](http://en.wikipedia.org/wiki/Template_method_pattern).
+As the whole internal process, that is a happily *black box* for the user, is 
+surely complex and the developers wanted to keep it as generic as possible, they
+have provided some hooks within the object model, as one might know by 
+the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern).
 
 **Remark**: This is not an evil thing at all!
 
@@ -91,7 +92,7 @@ during the execution of a webservice and not directly accessible before or
 after the call of an operation). We can inject a so called *MessageInspector*,
 defined by the interface `IClientMessageInspector`:
 
-```csharp
+```cs
     public class InterceptMessageBehavior  : IEndpointBehavior
     {
         // other methods and stuff
@@ -99,30 +100,32 @@ defined by the interface `IClientMessageInspector`:
         public void ApplyClientBehavior (ServiceEndpoint serviceEndpoint, 
                                          ClientRuntime behavior)
         {
+            // inject our custom inspector, that will deal with the messages
+            // as we will see in a minute
             behavior.MessageInspectors.Add (new MyCustomMessageInspector());
         }
 ```
 
-What does an inspector look like? Well that is a quite simple interface, which
-just has two methods to implement: One that is accessed just *before* sending
-the request and one that is accssed just *after* getting the response.
+What does an inspector look like? Well that is quite a simple interface, with
+just two methods to implement: One that is accessed just *before* sending
+the request and one that is accessed just *after* getting the response.
 
 So that interface will be finally our playground to get the "goddamn" XML of
 the SOAP messages:
 
-```csharp
+```cs
     public class XmlMessageInspector : IClientMessageInspector
     {
         public void AfterReceiveReply (ref System.ServiceModel.Channels.Message message, 
                                     object correlationState)
         {
-            Console.Writeline(message.ToString());
+            Console.WriteLine(message.ToString());
         }
 
         public object BeforeSendRequest (ref System.ServiceModel.Channels.Message message, 
                                         System.ServiceModel.IClientChannel channel)
         {
-            Console.Writeline(message.ToString());
+            Console.WriteLine(message.ToString());
             return null;
         }
     }
@@ -133,9 +136,9 @@ longed-for XML string :-)
 
 The last thing we have to do, is to tell our client, that we have a super
 self made custom client behavior, that it should gently call during the
-execution of an SOAP operation.
+execution of a SOAP operation.
 
-```csharp
+```cs
     client.Endpoint.Behaviors.Add (new InterceptMessageBehavior());
 ```
 
@@ -161,8 +164,8 @@ But why on earth did they not provide a **default** implementation for such
 common tasks? Sorry, but you can't tell me, that none of the core developers
 never faced this kind of problem! And even if they never ever considered that
 to be a common problem, why they did not listen to the users and handed it in
-later on? Just search it on google and you **see** that this is a 
-**common problem**!
+later on? Just search for it on google and you will **recognize** that 
+this **is** a common problem!
 
 The usage of patterns and ways to open up a workflow process for extensions is
 important and a good thing. Not to provide **default** solutions to made
@@ -177,19 +180,22 @@ You just have to pass a arbitrary listener into the creation process of a
 service client, which you can easily put into some kind of factory or builder.
 
 In my example application you will find the construction process in the
-`BLZServiceFactory`.
+`BLZServiceFactory`-class.
 
 Imho it is not a big deal to provide something similar within the .NET 
 framework... that would save so much life-time that you can spend with much 
 nicer things than to explore the possibilities of dealing with SOAP
-problems... ok, almost everything is more fun than SOAP ;-)
+problems... ok, almost everything is more fun than SOAP ;-) 
 
-If you like my thoughts and solution, tell it to the world and Microsoft, if
-you dislike it, tell it to **me**!
+(Perhaps that is the reason, why the .NET developers did not spend to much 
+time with their SOAP APIs? :-D just kidding... )
 
 
 P.S.
 ----
+
+If you like my thoughts and solution, tell it to the world and Microsoft, if
+you dislike it, tell it to **me**!
 
 Hey guys @Microsoft: I allow you to grab my solution and put it into the 
 framework! Please help people wasting less time in the future! :-P

@@ -9,12 +9,12 @@ SOAP dropped its [acronym](http://en.wikipedia.org/wiki/SOAP#History) long time
 ago - although I had always the impression, that SOAP is a complex beast like C++, 
 now it is clearer than ever to me, why that was a good and consequent move!
 
-It's quite **simple**: SOAP is not simple, instead it is dauting and cumbersome!
+It's quite **simple**: SOAP is not simple, instead it is daunting and cumbersome!
 
 Of course good tooling can, should, even better must and - in fact - does 
-support the developer in implementing SOAP-webservices and clients in C#, but almost 
-every task you wanna do besides the straight calling of a service is ending up 
-in implementing thousands of interfaces.
+support the developer in implementing SOAP-webservices and clients in C#. But 
+almost every task you wanna do besides the straight calling of a service is 
+ending up in implementing thousands of interfaces.
 
 Of course it is nice, to follow good patterns and practises (especially in 
 static typed languages with a simple object model and single dispatching), 
@@ -33,9 +33,9 @@ If you use a SOAP webservice, you might be interested in knowing, what XML data
 is really generated and sent by your application, to be more precise by the
 framework, that one uses to deal with SOAP services. 
 
-(Please ignore all these awful tutorials on the net, where people show how 
+(**Please ignore all these awful tutorials on the net, where people show how 
 to manually craft the XML requests and responses! Use a framework that handles 
-that for you!)
+that for you!**)
 
 Perhaps you want to make sure, that you send and receive the data you expected
 or it is just to document which actions had taken place.
@@ -78,11 +78,17 @@ Sorry, that would be to easy for the world of SOAP!
 
 As the whole internal process - that is happily a *black box* for the user - is 
 surely complex and the developers wanted to keep it as generic and flexible 
-as possible, they have provided some hooks within the object model, as one might know by 
-the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern),
-to enable the user to inject custom actions and behaviors into the execution process.
+as possible, they have provided some hooks within the object model. One might 
+know this by the [template method pattern](http://en.wikipedia.org/wiki/Template_method_pattern),
+which enables the client to inject custom actions and behaviors into the 
+execution process.
 
-**Remark**: This is not an evil thing at all!
+**Remark: This is not an evil thing at all!** On the contrary, this is based
+upon the [open closed](http://en.wikipedia.org/wiki/Open/closed_principle) 
+principle, which is the first basic principle of 
+[SOLID](http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29).
+
+Ok, after this clearification let's go on...
 
 There is a property `client.Endpoint.Behaviors` that can take arbitrary objects
 of the type `IEndpointBehavior`. This interface provides a collection of
@@ -94,8 +100,8 @@ different types of hooks, which one can use to intercept the default workflow:
 - `Validate`
 
 Our interest lies in the `ApplyClientBehavior`-method! There we can access the
-``behavior``-object of a client-runtime-object (that one, that is only living 
-during the execution of a webservice and not directly accessible before or
+``behavior``-object of a client-runtime-object (that is one, that is only living 
+during the execution of a webservice and is not directly accessible before or
 after the call of an operation). We can inject a so called *MessageInspector*,
 defined by the interface `IClientMessageInspector`:
 

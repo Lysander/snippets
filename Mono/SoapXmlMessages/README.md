@@ -85,7 +85,7 @@ execution process.
 
 **Remark: This is not an evil thing at all!** On the contrary, this is based
 upon the [open closed](http://en.wikipedia.org/wiki/Open/closed_principle) 
-principle, which is the first basic principle of 
+principle, which is the second basic principle of 
 [SOLID](http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29).
 
 Ok, after this clearification let's go on...

@@ -162,10 +162,13 @@ class Menu:
                 print("Bitte nur Zahlen aus dem Bereich 1..{} eingeben".format(
                                                     len(self.context.items)))
 
-    def run(self):
+    def run(self, once=False):
         """
         Core method to handle a menu. This invokes a loop that handles all
         menu tasks as long as the main menu is exited by the user.
+        
+        :param once: if set to ``True`` will terminate the menu after one
+                     selection.
         """
         while True:
             print(self.context)
@@ -177,6 +180,8 @@ class Menu:
                 return
             else:
                 command()
+            if once:
+                return
 
     
 def main():

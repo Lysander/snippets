@@ -9,6 +9,4 @@
 ;;
 ;; problem 27
 ;; Palindrome detection
-#(let [v (vec %) 
-	   rv (reverse (vec %))]
-  (every? true? (map = v rv)))
+ #(= (seq %) (reverse %))

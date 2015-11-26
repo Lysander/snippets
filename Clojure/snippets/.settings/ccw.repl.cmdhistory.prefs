@@ -1,0 +1,2 @@
+cmdhistory=["(run-tests)" "(run-all-tests)" "(run-tests)" "(run-tests test-mul)" "(run-tests)" "(test-mul)" "(mul 1 0)" "(run-tests)" "(mul 2 1)" "(mul 3 4)" "(pow 1  0)" "(pow 0 1)" "(pow 0 0)" "(pow 4 1)" "(run-tests)" "(pow 0 0)" "(squared 0)" "(pow 0 2)" "(run-tests)" "(tc-mul 2 3)" "(tc-mul 0 0)" "(tc-mul 0 1)" "(tc-mul 0 2)" "(tc-mul 1 1)" "(tc-mul 2 1)" "(tc-mul 2 4)" "(run-tests)"]
+eclipse.preferences.version=1

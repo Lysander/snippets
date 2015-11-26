@@ -10,3 +10,8 @@
 ;; problem 27
 ;; Palindrome detection
  #(= (seq %) (reverse %))
+
+
+;;
+;; problem 28
+;; flatten a nested structure

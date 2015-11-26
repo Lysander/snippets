@@ -52,12 +52,12 @@
               acc
               (recur a (dec b) (+ acc a))))]
     (cond
-        (zero? b)
-          0
-        (= b 1)
-          a
-        :else
-          (mul-acc a b 0))))
+      (zero? b)
+        0
+      (= b 1)
+        a
+      :else
+        (mul-acc a b 0))))
     
 (defn tc-pow [b e]
   "This recursive power function, powers the base b with the exponent e.

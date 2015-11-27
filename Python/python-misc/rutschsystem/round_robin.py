@@ -36,7 +36,8 @@ def round_robin(group, filler="leer"):
     1. Durchgang:
     1 2 3
     6 5 4
-    (Lesen 1. Zeile von links, 2. Zeile von rechts)
+    (Die Partien stehen in den Spalten codiert, also "1 gegen 6", "2 gegen 5" 
+    und "3 gegen 4")
     
     Nun rotieren nach rechts, die 1 bleibt aber stehen!    
     1   2 → 3
